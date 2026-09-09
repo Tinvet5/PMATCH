@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Studio · PLUGIN MATCH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="studio.css" />
+</head>
+<body class="studio-body" data-page="studio">
+  <header class="studio-topbar">
+    <div class="studio-brand">
+      <span class="studio-badge">DEV</span>
+      <strong>PLUGIN MATCH STUDIO</strong>
+      <span class="studio-unsaved" id="saveState">Saved locally</span>
+    </div>
+    <div class="studio-top-actions">
+      <a class="studio-button ghost" href="index.html">Back to site</a>
+      <button class="studio-button ghost" id="newModuleBtn" type="button">New module</button>
+      <button class="studio-button ghost" id="importBtn" type="button">Import JSON</button>
+      <button class="studio-button ghost" id="exportBtn" type="button">Export JSON</button>
+      <button class="studio-button" id="previewBtn" type="button">Preview</button>
+      <button class="studio-button primary" id="saveBtn" type="button">Save module</button>
+      <input id="importFile" type="file" accept="application/json,.json" hidden />
+    </div>
+  </header>
+
+  <main class="studio-layout">
+    <aside class="studio-panel studio-library-panel">
+      <div class="studio-panel-heading">
+        <div>
+          <span class="eyebrow">LIBRARY</span>
+          <h1>Modules</h1>
+        </div>
+      </div>
+      <label class="studio-search">
+        <span>⌕</span>
+        <input id="moduleSearch" type="search" placeholder="Search modules" />
+      </label>
+      <div class="module-library" id="moduleLibrary"></div>
+      <p class="studio-helper">Studio data is stored in your browser for this prototype. Export JSON for a portable backup.</p>
+    </aside>
+
+    <section class="studio-workspace">
+      <div class="workspace-toolbar">
+        <div>
+          <span class="eyebrow">CANVAS</span>
+          <strong id="canvasTitle">Untitled module</strong>
+        </div>
+        <div class="workspace-toolbar-actions">
+          <button class="studio-button compact" id="addLabelBtn" type="button">+ Add label</button>
+          <button class="studio-button compact danger" id="deleteLabelBtn" type="button" disabled>Delete label</button>
+        </div>
+      </div>
+
+      <div class="studio-canvas-shell">
+        <div class="studio-canvas" id="studioCanvas">
+          <div class="studio-empty-image" id="emptyImageState">
+            <strong>Upload a plugin image</strong>
+            <span>Then use “Add label” and click a control.</span>
+          </div>
+          <img class="studio-main-image" id="studioMainImage" alt="Plugin module preview" hidden />
+          <svg class="studio-lines" id="studioLines" aria-hidden="true"></svg>
+          <div class="studio-label-layer" id="studioLabelLayer"></div>
+        </div>
+        <div class="canvas-statusbar">
+          <span id="canvasInstruction">Select a module or upload an image.</span>
+          <span id="canvasCoordinates">—</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="studio-panel studio-inspector-panel">
+      <div class="studio-tabs" role="tablist">
+        <button class="studio-tab active" data-tab="module" type="button">Module</button>
+        <button class="studio-tab" data-tab="label" type="button">Label</button>
+      </div>
+
+      <div class="studio-tab-panel active" data-panel="module">
+        <section class="inspector-section">
+          <span class="eyebrow">PLUGIN INFO</span>
+          <div class="studio-field-grid two">
+            <label class="studio-field"><span>Name</span><input id="pluginName" type="text" placeholder="FET-76" /></label>
+            <label class="studio-field"><span>Developer</span><input id="pluginDeveloper" type="text" placeholder="Arturia" /></label>
+          </div>
+          <div class="studio-field-grid two">
+            <label class="studio-field"><span>Category</span><input id="pluginCategory" type="text" placeholder="Compressor" /></label>
+            <label class="studio-field"><span>Subtype</span><input id="pluginSubtype" type="text" placeholder="FET" /></label>
+          </div>
+          <div class="studio-field-grid two">
+            <label class="studio-field"><span>Rating</span><input id="pluginRating" type="number" min="0" max="5" step="0.1" /></label>
+            <label class="studio-field"><span>Formats</span><input id="pluginFormats" type="text" placeholder="VST3 / AU / AAX" /></label>
+          </div>
+          <label class="studio-field"><span>Operating systems</span><input id="pluginOS" type="text" placeholder="Win & macOS" /></label>
+          <label class="studio-field"><span>Official / download URL</span><input id="pluginDownload" type="url" placeholder="https://developer.com/plugin" /></label>
+          <label class="studio-field"><span>Description</span><textarea id="pluginDescription" rows="6" placeholder="General module description..."></textarea></label>
+        </section>
+
+        <section class="inspector-section">
+          <span class="eyebrow">IMAGE</span>
+          <label class="upload-dropzone" for="pluginImageInput">
+            <strong>Upload image</strong>
+            <span>PNG, JPG or WEBP</span>
+            <input id="pluginImageInput" type="file" accept="image/png,image/jpeg,image/webp" hidden />
+          </label>
+          <label class="studio-range"><span>Zoom <output id="zoomValue">100%</output></span><input id="imageZoom" type="range" min="50" max="220" value="100" /></label>
+          <label class="studio-range"><span>Horizontal <output id="offsetXValue">0px</output></span><input id="imageOffsetX" type="range" min="-350" max="350" value="0" /></label>
+          <label class="studio-range"><span>Vertical <output id="offsetYValue">0px</output></span><input id="imageOffsetY" type="range" min="-240" max="240" value="0" /></label>
+          <button class="studio-button wide ghost" id="resetImageBtn" type="button">Reset framing</button>
+        </section>
+
+        <section class="inspector-section">
+          <span class="eyebrow">DETAIL CARDS</span>
+          <label class="studio-field"><span>Ideal for — one per line</span><textarea id="idealForInput" rows="5" placeholder="Vocals | Keeps vocals forward\nDrums | Fast transient control"></textarea></label>
+          <label class="studio-field"><span>Qualities — one per line</span><textarea id="qualitiesInput" rows="5" placeholder="Fast attack | Controls transients\nParallel mix | Blends dry and wet"></textarea></label>
+        </section>
+      </div>
+
+      <div class="studio-tab-panel" data-panel="label">
+        <div class="label-empty-inspector" id="labelEmptyInspector">
+          <strong>No label selected</strong>
+          <p>Choose a label on the canvas or create a new one.</p>
+        </div>
+        <section class="inspector-section" id="labelInspector" hidden>
+          <span class="eyebrow">CONTROL LABEL</span>
+          <label class="studio-field"><span>Title</span><input id="labelTitle" type="text" placeholder="Attack" /></label>
+          <label class="studio-field"><span>Description box</span><textarea id="labelDescription" rows="7" placeholder="Explain what this control does and when to use it..."></textarea></label>
+          <div class="position-readout">
+            <div><span>Hotspot</span><strong id="hotspotPosition">—</strong></div>
+            <div><span>Label box</span><strong id="calloutPosition">—</strong></div>
+          </div>
+          <p class="studio-helper">Drag the dot to the exact control. Drag its label card to place the explanation. The connector line updates automatically.</p>
+        </section>
+      </div>
+    </aside>
+  </main>
+
+  <div class="studio-toast" id="studioToast" role="status" aria-live="polite"></div>
+
+  <script src="module-defaults.js"></script>
+  <script src="studio-storage.js"></script>
+  <script src="studio.js"></script>
+</body>
+</html>

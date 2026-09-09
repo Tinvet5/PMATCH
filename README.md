@@ -1,40 +1,71 @@
-# PLUGIN MATCH — front-end prototype
+# PLUGIN MATCH — Studio Mode Prototype
 
-This is a static HTML/CSS/JavaScript prototype based on the Canva screens supplied in chat.
-
-## Files
-
-- `index.html` — homepage, hero, featured plugin carousel and category grid
-- `compressors.html` — compressor category browser with subtype filters and search
-- `plugin.html` — FET-76 detail page with interactive control hotspots
-- `styles.css` — complete responsive design system
-- `app.js` — carousel, search, filters, navigation, tooltips and toast messages
-- `assets/` — image crops taken from the mockups supplied in chat
+This iteration adds a visual developer/content editor so plugin modules do not need to be hard-coded one by one.
 
 ## Run locally
 
-You can double-click `index.html` and it will work in most browsers.
-
-For the most reliable local development setup, open this folder in VS Code and run a simple local server, for example:
+Use VS Code Live Server, or from this folder run:
 
 ```bash
 python -m http.server 8080
 ```
 
-Then visit:
+Open:
 
-```text
-http://localhost:8080
-```
+- Site: http://localhost:8080/index.html
+- Studio: http://localhost:8080/studio.html
+- Generated sample module: http://localhost:8080/module.html?id=fet76-arturia
 
-Alternatively, install the VS Code extension **Live Server** and choose **Open with Live Server** on `index.html`.
+Do **not** open the files directly with `file://`; Studio uses IndexedDB and works best from a local web server.
 
-## Important before production
+## Studio workflow
 
-The current images were cropped from the supplied Canva mockup screenshots, so replace them with the original high-resolution plugin screenshots/assets before publishing.
+1. Open `studio.html`.
+2. Create a new module or select the sample FET-76 module.
+3. Fill in plugin metadata and the main description.
+4. Upload a PNG/JPG/WEBP screenshot.
+5. Adjust image zoom and X/Y framing.
+6. Click **+ Add label** and then click the exact control on the image.
+7. Edit the label title and its description in the **Label** inspector.
+8. Drag the hotspot to refine the control position.
+9. Drag the label card to position the annotation. The connector line updates automatically.
+10. Save the module.
+11. Click **Preview** to render the public page from the saved data.
+12. Export JSON for a portable backup or future database migration.
 
-The download button is intentionally not connected to an external URL yet. Add only official vendor download/product links in production.
+## What is data-driven now
 
-## Suggested next step
+A module contains:
 
-Once the visual direction is approved, migrate the data into a structured JSON/API or a Next.js project so new plugins can be added without creating a new page manually.
+- Plugin name and developer
+- Category/subtype
+- Rating
+- Plugin formats / OS support
+- Official/download URL
+- General description
+- Plugin image and framing settings
+- Any number of controls/labels
+- Each control's hotspot coordinates
+- Each callout label's coordinates
+- Each control description
+- "Ideal for" cards
+- "Qualities" cards
+
+`module.html` is a reusable renderer. It reads the module data and generates the page automatically, so you do not create a separate HTML file for every plugin.
+
+## Storage in this prototype
+
+Studio uses browser **IndexedDB**. This is intentionally a frontend-only prototype and requires no server/database credentials.
+
+For production, replace IndexedDB with:
+
+- authenticated admin access,
+- a real database for module JSON,
+- object/cloud storage for plugin screenshots,
+- and a publishing API.
+
+## AI-assisted label generation
+
+This prototype handles visual label creation and descriptions without hard-coding. Fully automatic recognition of knobs/controls from a screenshot would require a secure backend vision/AI endpoint. Do not place an API key directly in `studio.js` or other browser code.
+
+A later Studio iteration can add an **Analyze image** action that sends the uploaded image to a backend and returns suggested control names, descriptions, and approximate coordinates for developer approval.

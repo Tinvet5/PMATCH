@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PLUGIN MATCH interactive plugin module." />
+  <title>Plugin Module · PLUGIN MATCH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Roboto+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="module.css" />
+</head>
+<body data-page="module">
+  <header class="site-header compact-header">
+    <a class="brand-pill is-active" href="index.html">PLUGINS/VST</a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="compressors.html">COMPRESORES</a>
+      <a href="index.html#monthly">NOTICIAS</a>
+      <a href="index.html#categories">PMC</a>
+      <a href="index.html#categories">PM-GAME</a>
+    </nav>
+    <label class="search-shell" aria-label="Búsqueda personalizada">
+      <span class="search-icon" aria-hidden="true"></span>
+      <input type="search" placeholder="BÚSQUEDA PERSONALIZADA" />
+    </label>
+    <a class="avatar-button" href="studio.html" aria-label="Open Studio"><span class="avatar-head"></span><span class="avatar-body"></span></a>
+  </header>
+
+  <main id="moduleRoot" class="generated-module" hidden>
+    <section class="generated-hero">
+      <div class="plugin-detail-heading generated-heading">
+        <h1 id="moduleTitle"></h1>
+        <a class="download-button" id="moduleDownload" href="#" target="_blank" rel="noopener">DESCARGAR</a>
+        <p id="moduleMeta"></p>
+      </div>
+
+      <div class="generated-stage" id="generatedStage">
+        <img id="generatedImage" class="generated-image" alt="Plugin interface" />
+        <svg id="generatedLines" class="generated-lines" aria-hidden="true"></svg>
+        <div id="generatedControls" class="generated-controls"></div>
+      </div>
+      <p class="diagram-hint">Haz clic en un punto o etiqueta para ver su explicación.</p>
+
+      <div class="generated-control-reader" id="controlReader">
+        <span>CONTROL</span>
+        <h2 id="controlReaderTitle">Selecciona un control</h2>
+        <p id="controlReaderBody">Las explicaciones creadas en Studio aparecerán aquí.</p>
+      </div>
+    </section>
+
+    <section class="detail-grid section-shell generated-detail-grid">
+      <div class="description-column">
+        <h2>DESCRIPCIÓN</h2>
+        <div class="info-card description-card" id="moduleDescription"></div>
+        <h2 class="rating-title">VALORACIÓN</h2>
+        <div class="rating-badge" id="moduleRating"></div>
+      </div>
+      <div class="use-column">
+        <h2>PLUGIN IDEAL PARA:</h2>
+        <div class="stacked-cards" id="idealForCards"></div>
+      </div>
+      <div class="quality-column">
+        <h2>CUALIDADES</h2>
+        <div class="stacked-cards" id="qualityCards"></div>
+      </div>
+    </section>
+  </main>
+
+  <section class="module-error" id="moduleError" hidden>
+    <h1>Module not found</h1>
+    <p>Open Studio, save a module, and preview it again.</p>
+    <a href="studio.html">OPEN STUDIO</a>
+  </section>
+
+  <a class="dev-studio-launch" href="studio.html">DEV STUDIO</a>
+
+  <script src="module-defaults.js"></script>
+  <script src="studio-storage.js"></script>
+  <script src="module-renderer.js"></script>
+</body>
+</html>
