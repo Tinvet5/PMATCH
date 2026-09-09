@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FET-76 · PLUGIN MATCH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="plugin">
+  <header class="site-header compact-header">
+    <a class="brand-pill is-active" href="index.html">PLUGINS/VST</a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="compressors.html">COMPRESORES</a>
+      <a href="index.html#monthly">NOTICIAS</a>
+      <a href="index.html#categories">PMC</a>
+      <a href="index.html#categories">PM-GAME</a>
+    </nav>
+    <label class="search-shell">
+      <span class="search-icon" aria-hidden="true"></span>
+      <input type="search" placeholder="BÚSQUEDA PERSONALIZADA" />
+    </label>
+    <a class="avatar-button" href="index.html" aria-label="Inicio"><span class="avatar-head"></span><span class="avatar-body"></span></a>
+  </header>
+
+  <main>
+    <section class="plugin-hero-detail" aria-labelledby="pluginTitle">
+      <div class="plugin-detail-heading">
+        <h1 id="pluginTitle">FET-76 - ARTURIA</h1>
+        <button class="download-button" id="downloadBtn" type="button">DESCARGAR</button>
+        <p>VST3/AU/AAX&nbsp;&nbsp;·&nbsp;&nbsp;Win &amp; MacOS</p>
+      </div>
+
+      <div class="diagram-wrap" id="diagramWrap">
+        <img src="assets/fet76-main.png" alt="Interfaz del compresor Arturia FET-76" />
+        <button class="hotspot" style="--x:13%;--y:52%" data-title="Input" data-body="Regula el ingreso de señal al circuito y define cuán fuerte golpeará el umbral." aria-label="Explicación de Input"></button>
+        <button class="hotspot" style="--x:31%;--y:52%" data-title="Output" data-body="Compensa la pérdida de dB después de la compresión y ajusta el nivel final." aria-label="Explicación de Output"></button>
+        <button class="hotspot" style="--x:47%;--y:33%" data-title="Attack" data-body="Controla la velocidad a la que actúa el compresor una vez superado el umbral." aria-label="Explicación de Attack"></button>
+        <button class="hotspot" style="--x:47%;--y:68%" data-title="Release" data-body="Determina cuánto tarda el compresor en soltar la señal procesada." aria-label="Explicación de Release"></button>
+        <button class="hotspot" style="--x:59%;--y:58%" data-title="Ratio" data-body="Define la cantidad de reducción de ganancia aplicada una vez que la señal supera el umbral." aria-label="Explicación de Ratio"></button>
+        <button class="hotspot" style="--x:73%;--y:58%" data-title="VU Meter" data-body="Referencia visual del procesamiento. Puede mostrar GR, IN u OUT según el modo seleccionado." aria-label="Explicación del VU meter"></button>
+        <button class="hotspot" style="--x:86%;--y:52%" data-title="Mix" data-body="Mezcla la señal original con la señal comprimida para facilitar compresión paralela." aria-label="Explicación de Mix"></button>
+        <button class="hotspot" style="--x:83%;--y:77%" data-title="Bypass" data-body="Activa o desactiva el procesamiento para comparar rápidamente la señal original y la procesada." aria-label="Explicación de Bypass"></button>
+        <div class="hotspot-tooltip" id="hotspotTooltip" hidden>
+          <strong id="tooltipTitle"></strong>
+          <p id="tooltipBody"></p>
+        </div>
+      </div>
+      <p class="diagram-hint">Haz clic en los puntos para explorar los controles del plugin.</p>
+    </section>
+
+    <section class="detail-grid section-shell">
+      <div class="description-column">
+        <h2>DESCRIPCIÓN</h2>
+        <div class="info-card description-card">
+          <p>El Arturia Comp FET-76 recrea minuciosamente el circuito clásico D/E del UREI 1176, modelando la respuesta de sus transistores FET y el amplificador Clase A.</p>
+          <p>Aporta el ponche, la presencia y la calidez armónica inolvidable que definió décadas de producciones legendarias, combinándolo con total flexibilidad digital.</p>
+        </div>
+        <h2 class="rating-title">VALORACIÓN</h2>
+        <div class="rating-badge" aria-label="Valoración 4.8 de 5">4.8 <span>★ ★ ★ ★ ★</span></div>
+      </div>
+
+      <div class="use-column">
+        <h2>PLUGIN IDEAL PARA:</h2>
+        <div class="stacked-cards">
+          <article class="info-card feature-card"><span class="icon-box">♬</span><h3>Voces Líderes</h3><p>Mantiene las voces al frente de la mezcla con una consistencia de nivel impecable y esa calidez “in-your-face” característica del Pop y Rock moderno.</p></article>
+          <article class="info-card feature-card"><span class="icon-box">◉</span><h3>Baterías y cajas</h3><p>Añade una pegada brutal a la caja y transforma micrófonos de sala de batería en paredes de sonido gigantescas y enérgicas.</p></article>
+          <article class="info-card feature-card"><span class="icon-box">⌁</span><h3>Bajo y Guitarras</h3><p>Proporciona sustain denso para bajos eléctricos y compacta guitarras rítmicas para encajarlas perfectamente en la mezcla.</p></article>
+        </div>
+      </div>
+
+      <div class="quality-column">
+        <h2>CUALIDADES</h2>
+        <div class="stacked-cards">
+          <article class="info-card feature-card"><span class="icon-box">⚡</span><h3>Ataque ultrarrápido</h3><p>Tiempos de respuesta medidos en microsegundos, capaces de domar transitorios agresivos y controlar la envolvente con precisión.</p></article>
+          <article class="info-card feature-card"><span class="icon-box">♨</span><h3>“All-buttons” Mode</h3><p>Modo de compresión extrema que activa todas las proporciones simultáneamente, generando saturación rica, distorsión y un bombeo explosivo único.</p></article>
+          <article class="info-card feature-card"><span class="icon-box">↗</span><h3>Input / Output Link</h3><p>Permite elevar la ganancia de entrada para saturar el circuito manteniendo un nivel de salida constante, facilitando comparaciones A/B objetivas.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
