@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Studio · PLUGIN MATCH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="studio.css" />
+</head>
+<body class="studio-body" data-page="studio">
+  <header class="studio-topbar">
+    <div class="studio-brand">
+      <span class="studio-badge">DEV</span>
+      <strong>PLUGIN MATCH STUDIO <span class="studio-version">v1.3</span></strong>
+      <span class="studio-unsaved" id="saveState">Guardado localmente</span>
+    </div>
+    <div class="studio-top-actions">
+      <a class="studio-button ghost" href="index.html">Inicio</a>
+      <a class="studio-button ghost" href="plugins.html">Ver catálogo</a>
+      <button class="studio-button ghost" id="newModuleBtn" type="button">Nuevo módulo</button>
+      <button class="studio-button ghost excel-action" id="excelImportBtn" type="button">Importar Excel</button>
+      <button class="studio-button ghost" id="importBtn" type="button">Importar JSON</button>
+      <button class="studio-button ghost" id="exportBtn" type="button">Exportar JSON</button>
+      <button class="studio-button" id="previewBtn" type="button">Vista previa</button>
+      <button class="studio-button primary" id="saveBtn" type="button">Guardar módulo</button>
+      <input id="importFile" type="file" accept="application/json,.json" hidden />
+      <input id="excelFile" type="file" accept=".xlsx,.xls,.csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv" hidden />
+    </div>
+  </header>
+
+  <main class="studio-layout">
+    <aside class="studio-panel studio-library-panel">
+      <div class="studio-panel-heading">
+        <div>
+          <span class="eyebrow">BIBLIOTECA</span>
+          <h1>Módulos</h1>
+        </div>
+        <span class="library-count" id="libraryCount">0</span>
+      </div>
+      <label class="studio-search">
+        <span>⌕</span>
+        <input id="moduleSearch" type="search" placeholder="Buscar módulos" />
+      </label>
+      <div class="library-filter-grid">
+        <label><span>Desarrollador</span><select id="developerFilter"><option value="">Todos</option></select></label>
+        <label><span>Tipo</span><select id="typeFilter"><option value="">Todos</option></select></label>
+        <label class="filter-wide"><span>Subgrupo</span><select id="subgroupFilter"><option value="">Todos</option></select></label>
+      </div>
+      <div class="catalog-health" id="catalogHealth">
+        <strong>Catálogo Excel v1.2</strong>
+        <span>Preparando datos…</span>
+      </div>
+      <div class="module-library" id="moduleLibrary"></div>
+      <p class="studio-helper">El contenido se guarda localmente en este prototipo. Reimportar Excel actualiza la información del módulo sin borrar la imagen, los hotspots ni las etiquetas ya creadas.</p>
+    </aside>
+
+    <section class="studio-workspace">
+      <div class="workspace-toolbar">
+        <div>
+          <span class="eyebrow">LIENZO</span>
+          <strong id="canvasTitle">Módulo sin título</strong>
+        </div>
+        <div class="workspace-toolbar-actions">
+          <button class="studio-button compact" id="addLabelBtn" type="button">+ Añadir etiqueta</button>
+          <button class="studio-button compact danger" id="deleteLabelBtn" type="button" disabled>Eliminar etiqueta</button>
+        </div>
+      </div>
+
+      <div class="studio-canvas-shell">
+        <div class="studio-canvas" id="studioCanvas">
+          <div class="studio-empty-image" id="emptyImageState">
+            <strong>Sube una imagen del plugin</strong>
+            <span>Después usa “Añadir etiqueta” y haz clic sobre un control.</span>
+          </div>
+          <img class="studio-main-image" id="studioMainImage" alt="Vista previa del módulo" hidden />
+          <svg class="studio-lines" id="studioLines" aria-hidden="true"></svg>
+          <div class="studio-label-layer" id="studioLabelLayer"></div>
+        </div>
+        <div class="canvas-statusbar">
+          <span id="canvasInstruction">Selecciona un módulo o sube una imagen.</span>
+          <span id="canvasCoordinates">—</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="studio-panel studio-inspector-panel">
+      <div class="studio-tabs" role="tablist">
+        <button class="studio-tab active" data-tab="module" type="button">Módulo</button>
+        <button class="studio-tab" data-tab="label" type="button">Etiqueta</button>
+      </div>
+
+      <div class="studio-tab-panel active" data-panel="module">
+        <section class="inspector-section source-section" id="sourceInfoSection" hidden>
+          <div class="source-heading-row">
+            <span class="eyebrow">ORIGEN DE DATOS</span>
+            <span class="source-badge">EXCEL</span>
+          </div>
+          <div class="source-info-card">
+            <strong id="sourceFileName">Plugins.xlsx</strong>
+            <span id="sourceLocation">—</span>
+          </div>
+          <p class="studio-helper">Los campos de contenido provienen del Excel. La imagen, controles y ajustes visuales se conservan al actualizar el catálogo.</p>
+        </section>
+
+        <section class="inspector-section">
+          <span class="eyebrow">INFORMACIÓN DEL PLUGIN</span>
+          <div class="studio-field-grid two">
+            <label class="studio-field"><span>Nombre</span><input id="pluginName" type="text" placeholder="FET-76" /></label>
+            <label class="studio-field"><span>Desarrollador</span><input id="pluginDeveloper" type="text" placeholder="Arturia" /></label>
+          </div>
+          <div class="studio-field-grid two">
+            <label class="studio-field"><span>Tipo</span><input id="pluginCategory" type="text" placeholder="Compresor" /></label>
+            <label class="studio-field"><span>Subgrupo</span><input id="pluginSubtype" type="text" placeholder="FET" /></label>
+          </div>
+          <div class="studio-field-grid two">
+            <label class="studio-field"><span>Valoración editorial</span><input id="pluginRating" type="number" min="0" max="5" step="0.1" /></label>
+            <label class="studio-field"><span>Formatos</span><input id="pluginFormats" type="text" placeholder="VST3 / AU / AAX" /></label>
+          </div>
+          <label class="studio-field"><span>Sistemas operativos</span><input id="pluginOS" type="text" placeholder="Windows y macOS" /></label>
+          <label class="studio-field"><span>URL oficial / descarga</span><input id="pluginDownload" type="url" placeholder="https://desarrollador.com/plugin" /></label>
+          <label class="studio-field"><span>Descripción</span><textarea id="pluginDescription" rows="6" placeholder="Descripción general del módulo..."></textarea></label>
+        </section>
+
+        <section class="inspector-section">
+          <span class="eyebrow">IMAGEN</span>
+          <label class="upload-dropzone" for="pluginImageInput">
+            <strong>Subir imagen</strong>
+            <span>PNG, JPG o WEBP</span>
+            <input id="pluginImageInput" type="file" accept="image/png,image/jpeg,image/webp" hidden />
+          </label>
+          <label class="studio-range"><span>Zoom <output id="zoomValue">100%</output></span><input id="imageZoom" type="range" min="50" max="220" value="100" /></label>
+          <label class="studio-range"><span>Horizontal <output id="offsetXValue">0px</output></span><input id="imageOffsetX" type="range" min="-350" max="350" value="0" /></label>
+          <label class="studio-range"><span>Vertical <output id="offsetYValue">0px</output></span><input id="imageOffsetY" type="range" min="-240" max="240" value="0" /></label>
+          <button class="studio-button wide ghost" id="resetImageBtn" type="button">Restablecer encuadre</button>
+        </section>
+
+        <section class="inspector-section">
+          <span class="eyebrow">TARJETAS DE INFORMACIÓN</span>
+          <label class="studio-field"><span>Ideal para — uno por línea</span><textarea id="idealForInput" rows="6" placeholder="Voces | Mantiene la voz al frente\nBaterías | Control rápido de transitorios"></textarea></label>
+          <label class="studio-field"><span>Cualidades — una por línea</span><textarea id="qualitiesInput" rows="6" placeholder="Ataque rápido | Controla transitorios\nMezcla paralela | Combina señal seca y procesada"></textarea></label>
+        </section>
+      </div>
+
+      <div class="studio-tab-panel" data-panel="label">
+        <div class="label-empty-inspector" id="labelEmptyInspector">
+          <strong>No hay una etiqueta seleccionada</strong>
+          <p>Elige una etiqueta en el lienzo o crea una nueva.</p>
+        </div>
+        <section class="inspector-section" id="labelInspector" hidden>
+          <span class="eyebrow">ETIQUETA DE CONTROL</span>
+          <label class="studio-field"><span>Título</span><input id="labelTitle" type="text" placeholder="Attack" /></label>
+          <label class="studio-field"><span>Descripción</span><textarea id="labelDescription" rows="7" placeholder="Explica qué hace este control y cuándo conviene usarlo..."></textarea></label>
+          <div class="position-readout">
+            <div><span>Hotspot</span><strong id="hotspotPosition">—</strong></div>
+            <div><span>Etiqueta</span><strong id="calloutPosition">—</strong></div>
+          </div>
+          <p class="studio-helper">Arrastra el punto hasta el control exacto. Arrastra la tarjeta desde cualquier parte de ella. La línea se actualiza en tiempo real.</p>
+        </section>
+      </div>
+    </aside>
+  </main>
+
+  <div class="excel-modal" id="excelImportModal" hidden>
+    <div class="excel-modal-backdrop" data-close-excel></div>
+    <section class="excel-dialog" role="dialog" aria-modal="true" aria-labelledby="excelDialogTitle">
+      <header class="excel-dialog-header">
+        <div>
+          <span class="eyebrow">PIPELINE DE CONTENIDO</span>
+          <h2 id="excelDialogTitle">Importar catálogo Excel</h2>
+          <p id="excelSourceLabel">Revisa los cambios antes de integrarlos a Studio.</p>
+        </div>
+        <button class="excel-close" type="button" aria-label="Cerrar" data-close-excel>×</button>
+      </header>
+
+      <div class="excel-summary-grid" id="excelSummaryGrid"></div>
+
+      <div class="excel-import-note">
+        <strong>Importación segura</strong>
+        <p>Si un módulo ya existe, Studio actualiza nombre, desarrollador, tipo, subgrupo, descripción, “Ideal para” y “Cualidades”. Conserva la imagen, el encuadre, los hotspots, las etiquetas y los campos manuales.</p>
+      </div>
+
+      <div class="excel-issues-wrap">
+        <div class="excel-section-title">
+          <strong>Revisión de datos</strong>
+          <span id="excelIssueCount"></span>
+        </div>
+        <div class="excel-issues" id="excelIssues"></div>
+      </div>
+
+      <footer class="excel-dialog-actions">
+        <button class="studio-button ghost" id="loadBundledCatalogBtn" type="button">Revisar catálogo incluido</button>
+        <div class="excel-dialog-actions-right">
+          <button class="studio-button ghost" type="button" data-close-excel>Cancelar</button>
+          <button class="studio-button primary" id="confirmExcelImportBtn" type="button">Importar catálogo</button>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <div class="studio-toast" id="studioToast" role="status" aria-live="polite"></div>
+
+  <script src="module-defaults.js"></script>
+  <script src="catalogo-inicial.js"></script>
+  <script src="excel-importer.js"></script>
+  <script src="studio-storage.js"></script>
+  <script src="studio.js"></script>
+</body>
+</html>

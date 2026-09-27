@@ -1,71 +1,73 @@
-# PLUGIN MATCH — Studio Mode Prototype
+# PLUGIN MATCH — v1.3 Responsive UI
 
-This iteration adds a visual developer/content editor so plugin modules do not need to be hard-coded one by one.
+Esta iteración mantiene intacto el pipeline de contenido de v1.2/v1.2.1 y se enfoca en la experiencia pública: navegación, catálogo y módulos en escritorio, tablet y móvil.
 
-## Run locally
+## Ejecutar el proyecto
 
-Use VS Code Live Server, or from this folder run:
+Usa VS Code + Live Server o ejecuta:
 
 ```bash
 python -m http.server 8080
 ```
 
-Open:
+Luego abre:
 
-- Site: http://localhost:8080/index.html
-- Studio: http://localhost:8080/studio.html
-- Generated sample module: http://localhost:8080/module.html?id=fet76-arturia
+```text
+http://localhost:8080/
+```
 
-Do **not** open the files directly with `file://`; Studio uses IndexedDB and works best from a local web server.
+## Qué cambia en v1.3
 
-## Studio workflow
+### Navegación responsive
+- Header reorganizado para tablet y móvil.
+- Menú lateral móvil con acceso a Catálogo, Destacados, Familias, PM-GAME y Studio.
+- Barra de búsqueda usable en pantallas pequeñas.
+- El icono de cuenta queda como placeholder visual para la futura etapa de login.
 
-1. Open `studio.html`.
-2. Create a new module or select the sample FET-76 module.
-3. Fill in plugin metadata and the main description.
-4. Upload a PNG/JPG/WEBP screenshot.
-5. Adjust image zoom and X/Y framing.
-6. Click **+ Add label** and then click the exact control on the image.
-7. Edit the label title and its description in the **Label** inspector.
-8. Drag the hotspot to refine the control position.
-9. Drag the label card to position the annotation. The connector line updates automatically.
-10. Save the module.
-11. Click **Preview** to render the public page from the saved data.
-12. Export JSON for a portable backup or future database migration.
+### Home
+- Hero de PLUGIN MATCH ajustado para formato vertical.
+- Carrusel de Plugins del Mes con indicadores y gesto de swipe.
+- Familias del catálogo adaptadas a 4, 2 o 1 columnas según el ancho.
+- Mejor jerarquía visual en tarjetas y contadores.
 
-## What is data-driven now
+### Catálogo
+- Filtros en panel lateral de escritorio.
+- En móvil, los filtros pasan a un drawer.
+- Indicador de cantidad de filtros activos.
+- Chips para ver y quitar filtros individualmente.
+- Tarjetas compactas horizontales en teléfonos.
+- Barra de resultados y ordenamiento optimizada para pantallas pequeñas.
 
-A module contains:
+### Módulos
+- En escritorio se mantienen hotspots, etiquetas y líneas.
+- En móvil se ocultan las etiquetas externas para no saturar la imagen.
+- Los hotspots siguen siendo interactivos.
+- Se genera una fila horizontal de controles debajo de la imagen.
+- Al tocar un control se actualiza el cuadro de explicación.
+- Descripción, valoración, Ideal para y Cualidades se apilan en una lectura vertical más limpia.
+- Búsqueda global desde la página del módulo.
 
-- Plugin name and developer
-- Category/subtype
-- Rating
-- Plugin formats / OS support
-- Official/download URL
-- General description
-- Plugin image and framing settings
-- Any number of controls/labels
-- Each control's hotspot coordinates
-- Each callout label's coordinates
-- Each control description
-- "Ideal for" cards
-- "Qualities" cards
+### Studio
+- El editor conserva el sistema de arrastre corregido.
+- Se mantiene la importación desde Excel y el catálogo local.
+- Studio sigue siendo principalmente una herramienta de escritorio/tablet.
 
-`module.html` is a reusable renderer. It reads the module data and generates the page automatically, so you do not create a separate HTML file for every plugin.
+## Archivos principales
 
-## Storage in this prototype
+- `index.html` — Home pública.
+- `plugins.html` — Catálogo público.
+- `module.html?id=<id>` — Módulo público.
+- `studio.html` — Editor interno.
+- `styles.css` — Estilos globales y responsive.
+- `catalog.css` — Catálogo responsive.
+- `module.css` — Módulo responsive.
+- `ui.js` — Menú móvil y comportamiento común.
+- `app.js` — Home, familias y carrusel.
+- `catalog.js` — Búsqueda, filtros, chips y drawer móvil.
+- `module-renderer.js` — Render dinámico y navegación de controles.
 
-Studio uses browser **IndexedDB**. This is intentionally a frontend-only prototype and requires no server/database credentials.
+## Almacenamiento
 
-For production, replace IndexedDB with:
+El catálogo base sigue viniendo de Excel. Los cambios visuales hechos en Studio siguen guardándose localmente en IndexedDB durante esta etapa de prototipo.
 
-- authenticated admin access,
-- a real database for module JSON,
-- object/cloud storage for plugin screenshots,
-- and a publishing API.
-
-## AI-assisted label generation
-
-This prototype handles visual label creation and descriptions without hard-coding. Fully automatic recognition of knobs/controls from a screenshot would require a secure backend vision/AI endpoint. Do not place an API key directly in `studio.js` or other browser code.
-
-A later Studio iteration can add an **Analyze image** action that sends the uploaded image to a backend and returns suggested control names, descriptions, and approximate coordinates for developer approval.
+La futura migración a backend/base de datos permitirá publicar esos cambios para todos los usuarios.

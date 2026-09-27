@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PLUGIN MATCH — aprende a usar plugins VST, descubre herramientas, categorías y recomendaciones de uso." />
+  <title>PLUGIN MATCH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Roboto+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand-pill is-active" href="index.html" aria-current="page">PLUGINS/VST</a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="plugins.html">CATÁLOGO</a>
+      <a href="#monthly">DESTACADOS</a>
+      <a href="#categories">FAMILIAS</a>
+      <a href="#categories">PM-GAME</a>
+    </nav>
+    <label class="search-shell header-search" aria-label="Búsqueda personalizada">
+      <span class="search-icon" aria-hidden="true"></span>
+      <input id="globalSearch" data-catalog-search type="search" placeholder="BUSCAR PLUGINS" autocomplete="off" />
+    </label>
+    <button class="avatar-button" type="button" aria-label="Cuenta" data-account-placeholder>
+      <span class="avatar-head"></span><span class="avatar-body"></span>
+    </button>
+    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNavPanel">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-nav-panel" id="mobileNavPanel" hidden>
+    <button class="mobile-nav-backdrop" type="button" data-mobile-nav-dismiss aria-label="Cerrar menú"></button>
+    <div class="mobile-nav-sheet">
+      <div class="mobile-nav-top">
+        <strong>PLUGIN MATCH</strong>
+        <button id="mobileNavClose" class="mobile-nav-close" type="button" aria-label="Cerrar menú">×</button>
+      </div>
+      <nav aria-label="Navegación móvil">
+        <a href="plugins.html">CATÁLOGO <span>→</span></a>
+        <a href="#monthly" data-mobile-nav-dismiss>DESTACADOS <span>→</span></a>
+        <a href="#categories" data-mobile-nav-dismiss>FAMILIAS <span>→</span></a>
+        <a href="#categories" data-mobile-nav-dismiss>PM-GAME <span>→</span></a>
+      </nav>
+      <a class="mobile-studio-link" href="studio.html">DEV STUDIO</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-wordmark" id="heroTitle" aria-label="PLUGIN MATCH">
+        <div class="hero-line hero-line-top"><span>PLUGIN</span></div>
+        <span class="heart-cutout" aria-hidden="true">♥</span>
+        <div class="signal-line" aria-hidden="true"></div>
+        <div class="hero-line hero-line-bottom">MATCH</div>
+      </div>
+      <p class="hero-tagline">TODOS LOS PLUGINS CON SUS ENLACES DE DESCARGA, ESPECIFICACIONES, EXPLICACIONES DE FUNCIONAMIENTO Y RECOMENDACIONES DE USO EN UN SOLO LUGAR.</p>
+    </section>
+
+    <section class="section-shell monthly-section" id="monthly" aria-labelledby="monthlyTitle">
+      <h2 class="section-title" id="monthlyTitle">PLUGINS DEL MES</h2>
+
+      <div class="featured-stage" id="featuredStage">
+        <button class="round-arrow left" id="featuredPrev" type="button" aria-label="Plugin anterior">‹</button>
+
+        <article class="featured-card" id="featuredCard" tabindex="0">
+          <div class="featured-image-shell">
+            <img id="featuredImage" src="assets/frontier.png" alt="Frontier de D16 Group" />
+          </div>
+          <h3 id="featuredName">FRONTIER - D16 GROUP</h3>
+          <p id="featuredMeta" class="featured-meta">Limiter · Free</p>
+        </article>
+
+        <button class="round-arrow right" id="featuredNext" type="button" aria-label="Plugin siguiente">›</button>
+      </div>
+      <div class="featured-pagination" id="featuredPagination" aria-label="Posición del carrusel"></div>
+    </section>
+
+    <section class="section-shell category-section" id="categories" aria-labelledby="categoryExplorerTitle">
+      <h2 class="sr-only" id="categoryExplorerTitle">Explorar plugins</h2>
+      <div class="filter-tabs home-catalog-bar" aria-label="Explorador de plugins">
+        <span class="filter-tab active">EXPLORAR POR FAMILIA</span>
+        <a class="filter-tab catalog-link-tab" href="plugins.html">VER CATÁLOGO COMPLETO →</a>
+      </div>
+
+      <div class="categories-grid" id="categoryGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No encontramos resultados con esa búsqueda.</p>
+    </section>
+  </main>
+
+  <a class="dev-studio-launch" href="studio.html">DEV STUDIO</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="module-defaults.js"></script>
+  <script src="catalogo-inicial.js"></script>
+  <script src="excel-importer.js"></script>
+  <script src="studio-storage.js"></script>
+  <script src="public-catalog.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

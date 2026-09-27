@@ -1,0 +1,1098 @@
+{
+  "schemaVersion": "1.2",
+  "source": {
+    "file": "Plugins.xlsx",
+    "sheet": "Hoja 1",
+    "headers": [
+      "EMPRESA / DESARROLLADOR",
+      "PLUGIN",
+      "TIPO",
+      "SUBGRUPO",
+      "DESCRIPCION",
+      "IDEAL PARA",
+      "CUALIDADES"
+    ]
+  },
+  "summary": {
+    "rows": 100,
+    "developers": 3,
+    "types": 33,
+    "subgroups": 34,
+    "uniqueModuleKeys": 98,
+    "duplicates": 2,
+    "warnings": 4,
+    "errors": 2
+  },
+  "duplicateGroups": [
+    {
+      "key": "acustica-audio-eminence",
+      "developer": "Acustica audio",
+      "plugin": "Eminence",
+      "rows": [
+        88,
+        90
+      ]
+    },
+    {
+      "key": "acustica-audio-cerise",
+      "developer": "Acustica audio",
+      "plugin": "Cerise",
+      "rows": [
+        89,
+        95
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "row": 21,
+      "level": "warning",
+      "field": "SUBGRUPO",
+      "message": "Subgrupo vacío",
+      "plugin": "MELLO-FI",
+      "developer": "Arturia"
+    },
+    {
+      "row": 52,
+      "level": "warning",
+      "field": "SUBGRUPO",
+      "message": "Subgrupo vacío",
+      "plugin": "Spaced Out",
+      "developer": "Baby Audio"
+    },
+    {
+      "row": 53,
+      "level": "warning",
+      "field": "SUBGRUPO",
+      "message": "Subgrupo vacío",
+      "plugin": "Super VHS",
+      "developer": "Baby Audio"
+    },
+    {
+      "row": 70,
+      "level": "warning",
+      "field": "CUALIDADES",
+      "message": "Cualidades vacías",
+      "plugin": "Pink 4",
+      "developer": "Acustica audio"
+    },
+    {
+      "row": 90,
+      "level": "error",
+      "field": "PLUGIN",
+      "message": "Duplicado por desarrollador + plugin (filas 88, 90)",
+      "plugin": "Eminence",
+      "developer": "Acustica audio"
+    },
+    {
+      "row": 95,
+      "level": "error",
+      "field": "PLUGIN",
+      "message": "Duplicado por desarrollador + plugin (filas 89, 95)",
+      "plugin": "Cerise",
+      "developer": "Acustica audio"
+    }
+  ],
+  "rows": [
+    {
+      "row": 2,
+      "developer": "Arturia",
+      "plugin": "FET-76",
+      "type": "Compresor",
+      "subgroup": "FET",
+      "description": "El Arturia Comp FET-76 recrea minuciosamente el circuito clásico D/E del UREI 1176, modelando la respuesta de sus transistores FET y el amplificador Clase A. Aporta el ponche, la presencia y la calidez armónica inolvidable que definió décadas de producciones legendarias, combinándolo con total flexibilidad digital.",
+      "idealFor": "1. Control de picos en voces: Sujeta dinámicas agresivas manteniendo la voz al frente.\n\n2. Pegada en percusiones: Acentúa el ataque en cajas y bombos.\n\n3. Compresión paralela: Densidad y energía en buses de batería.",
+      "qualities": "1. Ataque ultra rápido: Reacciona en microsegundos a transitorios.\n\n2. Modo All Buttons In: Compresión explosiva rica en armónicos.\n\n3. Mid/Side y Sidechain: Filtrado de graves y control estéreo."
+    },
+    {
+      "row": 3,
+      "developer": "Arturia",
+      "plugin": "VCA-65",
+      "type": "Compresor",
+      "subgroup": "VCA",
+      "description": "El Arturia Comp VCA-65 recrea fielmente el legendario compresor dbx 160 de estado sólido, modelando con precisión la tecnología VCA y la detección RMS no lineal del hardware original. Aporta ese snap rítmico, contundencia e impacto limpio que definieron el sonido del rock, funk y disco de los 70, complementado con funciones modernas de sidechain y mezcla paralela.",
+      "idealFor": "1. Bajos eléctricos/sintéticos: Estabiliza el volumen y acentúa el ataque.\n\n2. Cajas en funk/rock: Impacto percusivo claro sin aplastar la resonancia.\n\n3. Percusión secundaria: Aumenta la cohesión rítmica en arreglos cargados.",
+      "qualities": "1. Detección Peak/RMS: Reacciona a picos o promedia niveles.\n\n2. Envolvente Auto-Attack/Release: Ajuste dinámico sin bombeos.\n\n3. Filtro Sidechain: Evita que los subgraves disparen el compresor."
+    },
+    {
+      "row": 4,
+      "developer": "Arturia",
+      "plugin": "TUBE-STA",
+      "type": "Compresor",
+      "subgroup": "Vari-Mu",
+      "description": "El Arturia Comp TUBE-STA emula minuciosamente el icónico compresor a válvulas Gates STA-Level de los años 50, capturando la respuesta suave de su circuito Vari-Mu y la riqueza de su etapa de tubos vacuum. Entrega un tono denso, una calidez analógica envolvente y una nivelación de volumen imperceptible que cohesiona cualquier pista con sofisticación retro.",
+      "idealFor": "1. Nivelación en voces: Homogeneiza el nivel sin que se note compresión.\n\n2. Bajos vintage: Agrega cuerpo en medios-graves con estilo soul.\n\n3. Instrumentos acústicos: Cohesiona cuerdas, metales y pianos.",
+      "qualities": "1. Release seleccionable: Opciones Single, Double y Triple.\n\n2. Saturación de válvula: Sobrecarga tubos para calidez armónica.\n\n3. Sidechain con EQ: Permite filtrar las frecuencias de activación."
+    },
+    {
+      "row": 5,
+      "developer": "Arturia",
+      "plugin": "DIODE-609",
+      "type": "Compresor / Limitador",
+      "subgroup": "Diodo",
+      "description": "El Arturia Comp DIODE-609 recrea de forma impecable el legendario compresor y limitador de bus Neve 33609, emulando la respuesta no lineal de su puente de diodos y sus transformadores Marinair. Aporta el famoso \"pegamento\" de consola británica, una pegada analógica tridimensional y un control de picos firme que unifica mezclas completas con total autoridad.",
+      "idealFor": "1. Bus de mezcla principal: Aporta cohesión, cuerpo y control dinámico.\n\n2. Bus de baterías: Da sensación de espacio y sala unificada.\n\n3. Guitarras rítmicas: Mantiene un nivel parejo en paredes de guitarras.",
+      "qualities": "1. Secciones dobles: Etapas separadas de compresión y limitación.\n\n2. Procesamiento Mid/Side: Comprime centro y lados independientemente.\n\n3. Lookahead dinámico: Anticipa picos evitando distorsión."
+    },
+    {
+      "row": 6,
+      "developer": "Arturia",
+      "plugin": "Bus PEAK",
+      "type": "Limitador / Clipper",
+      "subgroup": "Brickwall",
+      "description": "El Arturia Bus PEAK integra un procesador de limitación de picos True Peak y un módulo de saturación armónica de precisión quirúrgica, diseñado para maximizar la sonoridad percibida sin degradar los transitorios. Ofrece el volumen competitivo, la claridad cristalina y el control dinámico transparente exigidos en el mastering y mix bus moderno.",
+      "idealFor": "1. Maximización en Máster: Eleva niveles LUFS para streaming.\n\n2. Picos en percusión: Recorta transitorios antes del limitador principal.\n\n3. Clipping en sintetizadores: Gana volumen percibido de forma transparente.",
+      "qualities": "1. True Peak Limiting: Previene picos intermuestra en conversión D/A.\n\n2. Saturación integrada: Insufla calidez antes de limitar.\n\n3. Medición LUFS/RMS: Lectura en tiempo real del rango dinámico."
+    },
+    {
+      "row": 7,
+      "developer": "Arturia",
+      "plugin": "Pre 1973",
+      "type": "Preamplificador / EQ",
+      "subgroup": "Emulación",
+      "description": "El Arturia Pre 1973 emula rigurosamente el legendario preamplificador de consola Neve 1073, capturando la saturación rica de sus transformadores Carnhill y las célebres curvas de ecualización inductiva. Otorga esa dimensión gigante, cuerpo en medios-graves y sedoso aire en agudos que transformaron el sonido del rock y pop mundial.",
+      "idealFor": "1. Voces principales: Aporta cuerpo en medios y aire en agudos.\n\n2. Guitarras: Otorga dimensión analógica a tomas por línea.\n\n3. Sintetizadores: Redondea la arista digital con saturación.",
+      "qualities": "1. Filtro Pasa-Altos: Limpia graves antes de saturar.\n\n2. EQ de 3 bandas: Curvas analógicas con inductores.\n\n3. Ruteo L/R y M/S: Procesa estéreo o centro/laterales."
+    },
+    {
+      "row": 8,
+      "developer": "Arturia",
+      "plugin": "Pre TRIDA",
+      "type": "Preamplificador / EQ",
+      "subgroup": "Emulación",
+      "description": "El Arturia Pre TRIDA recrea la codiciada canal de consola Trident A-Range, modelando la respuesta de sus amplificadores operacionales discretos y sus icónicos ecualizadores conmutados. Entrega una claridad impecable, un brillo agudo ultramusical libre de asperezas y una calidez británica única para destacar cualquier fuente en la mezcla.",
+      "idealFor": "1. Overheads de batería: Brinda aire y claridad a los platillos.\n\n2. Guitarras acústicas: Realza el rasgueo y brillo de las cuerdas.\n\n3. Voces femeninas: Añade presencia alta sin asperezas.",
+      "qualities": "1. EQ de 4 bandas: Potenciómetros de frecuencias fijas clásicas.\n\n2. Filtros en cascada: Limpieza quirúrgica de extremos.\n\n3. Saturación de entrada: Reproduce el empuje de la consola."
+    },
+    {
+      "row": 9,
+      "developer": "Arturia",
+      "plugin": "Pre V76",
+      "type": "Preamplificador",
+      "subgroup": "Emulación",
+      "description": "El Arturia Pre V76 emula con absoluta fidelidad el mítico preamplificador a válvulas Telefunken V76, responsable del sonido sofisticado de los estudios REDD de Abbey Road en los 60. Aporta una riqueza de armónicos pares, una presencia cremosa en vocales y un grosor valvular vintage inolvidable para producciones analógicas premium.",
+      "idealFor": "1. Pianos acústicos: Aporta grosor y textura a tomas secas.\n\n2. Voces Jazz/Indie/Soul: Imprime un color vintage e íntimo.\n\n3. Vientos y metales: Suaviza timbres ásperos dándoles calidez.",
+      "qualities": "1. Saturación a válvulas: Modela tubos PCL82 del diseño original.\n\n2. EQ de 2 bandas: Control intuitivo tipo shelf para grave/agudo.\n\n3. Gain Link: Mantiene el volumen constante al saturar entrada."
+    },
+    {
+      "row": 10,
+      "developer": "Arturia",
+      "plugin": "SITRAL-295",
+      "type": "Ecualizador",
+      "subgroup": "Transistores",
+      "description": "El Arturia EQ SITRAL-295 recrea meticulosamente los módulos de ecualización de consolas de difusión alemanas Siemens de los años 70, emulando el carácter discreto de sus transistores de germanio. Ofrece un moldeado tonal sedoso, curvas de respuesta sumamente musicales y una corrección tímbrica refinada sin alteraciones de fase agresivas.",
+      "idealFor": "1. Mastering: Retoque tonal suave para balancear el tema.\n\n2. Cuerdas/Acústicos: Realza la musicalidad sin asperezas.\n\n3. Suavizado M/S: Corrige mezclas frías mediante procesado M/S.",
+      "qualities": "1. Curvas anchas: Diseñadas para retoques siempre musicales.\n\n2. Canales independientes: Ajustes L/R o M/S separados.\n\n3. Saturación de Germanio: Tinte sutil de radiodifusión vintage."
+    },
+    {
+      "row": 11,
+      "developer": "Arturia",
+      "plugin": "TAPE-201",
+      "type": "Delay",
+      "subgroup": "Cinta",
+      "description": "El Arturia Delay TAPE-201 emula meticulosamente la mítica unidad de eco de cinta Roland RE-201 Space Echo, modelando el comportamiento mecánico del motor, la saturación del cabezal magnético y su reverb de muelles interna. Entrega un ambiente cálido, modulaciones orgánicas impredecibles y repeticiones llenas de textura analógica vintage.",
+      "idealFor": "1. Efectos Dub/Reggae: Colas de eco infinitas con auto-oscilación.\n\n2. Sintetizadores Lead: Añade dimensión y movimiento analógico.\n\n3. Guitarras psicodélicas: Combina cinta y reverb de muelles.",
+      "qualities": "1. Wow & Flutter: Fluctuaciones mecánicas reales del motor.\n\n2. Reverb de muelles: Añade textura metálica a las repeticiones.\n\n3. Saturación de cinta: Pérdida progresiva de agudos por pasada."
+    },
+    {
+      "row": 12,
+      "developer": "Arturia",
+      "plugin": "BRIGADE",
+      "type": "Delay",
+      "subgroup": "BBD",
+      "description": "El Arturia Delay BRIGADE recrea el legendario pedal de retardo analógico Electro-Harmonix Memory Man, emulando fielmente el comportamiento de los chips de memoria Bucket Brigade (BBD). Aporta repeticiones oscuras, una saturación orgánica envolvente y una modulación líquida tipo chorus/vibrato indispensable para paisajes sonoros nostálgicos.",
+      "idealFor": "1. Solos de guitarra: Espacio cálido sin invadir frecuencias.\n\n2. Teclados Lo-Fi: Desafinación nostálgica en pianos eléctricos.\n\n3. Relleno en voces: Colchón envolvente con retrasos cortos.",
+      "qualities": "1. Degradación BBD: Repeticiones pierden ancho de banda y saturan.\n\n2. Modulación LFO: Aplica chorus/vibrato al bucle de eco.\n\n3. Ping-Pong Estéreo: Expansión alternada entre L y R."
+    },
+    {
+      "row": 13,
+      "developer": "Arturia",
+      "plugin": "ETERNITY",
+      "type": "Delay",
+      "subgroup": "Granular",
+      "description": "El Arturia Delay ETERNITY es un procesador de retardo digital creativo diseñado desde cero, que combina un motor de eco versátil con filtros internos, bitcrusher y moduladores complejos. Permite transformar señales secas en patrones rítmicos en constante evolución, texturas futuristas y nubes ambientales con infinitas posibilidades de diseño sonoro.",
+      "idealFor": "1. Sound Design cinemático: Capas de eco complejas en evolución.\n\n2. Arpegios rítmicos: Patrones cuantizados con filtros dinámicos.\n\n3. Texturas Granulares/Glitch: Combina bitcrushing y modulaciones.",
+      "qualities": "1. Filtros en el Feedback: Procesa la señal repetida continuamente.\n\n2. Bitcrusher integrado: Degrada resolución o añade distorsión.\n\n3. LFOs y Secuenciador: Modula parámetros rítmicamente."
+    },
+    {
+      "row": 14,
+      "developer": "Arturia",
+      "plugin": "PLATE-140",
+      "type": "Reverb",
+      "subgroup": "Plate",
+      "description": "El Arturia Rev PLATE-140 recrea rigurosamente la legendaria cámara de reverberación de placa metálica EMT 140, modelando el preamplificador a válvulas de entrada y la física de resonancia de la placa. Otorga una densidad espacial inmediata, una cola brillante y una elegancia tridimensional que coloca cualquier voz o instrumento en primer plano.",
+      "idealFor": "1. Vocales Pop/Indie: Espacio elegante sin alejar la voz.\n\n2. Cajas de batería: Cola amplia y brillante con gran presencia.\n\n3. Guitarras solistas: Envuelve en una resonancia densa y sostenida.",
+      "qualities": "1. Preamp de tubo: Calienta la señal antes de excitar la placa.\n\n2. Control de Damping: Amortiguación física sobre la duración.\n\n3. Modulación de placa: Movimiento suave para evitar resonancias."
+    },
+    {
+      "row": 15,
+      "developer": "Arturia",
+      "plugin": "SPRING-636",
+      "type": "Reverb",
+      "subgroup": "Spring",
+      "description": "El Arturia Rev SPRING-636 emula con precisión la reverberación de muelles mecánica Grampian Type 636, capturando el carácter metálico de sus muelles y la saturación estridente de su preamplificador de germanio. Ofrece un espacio sucio, percusivo y lleno de actitud retro, ideal para producciones de corte dub, garage y rock 'n' roll.",
+      "idealFor": "1. Guitarras Surf/Dub/Garage: Goteo metálico al recibir transitorios.\n\n2. Sintetizadores/Teclados: Color oscuro y crujiente en secuencias.\n\n3. Percusión rítmica: Transforma golpes secos en ecos metálicos.",
+      "qualities": "1. Preamp de Germanio: Distorsiona la señal antes de los muelles.\n\n2. Tanques intercambiables: Diferentes modelos de muelles.\n\n3. Impacto mecánico: Emula el golpe físico sobre el chasis."
+    },
+    {
+      "row": 16,
+      "developer": "Arturia",
+      "plugin": "LX-24",
+      "type": "Reverb",
+      "subgroup": "Vintage",
+      "description": "El Arturia Rev LX-24 recrea minuciosamente la icónica reverberación digital Lexicon 224 de 1978, emulando los algoritmos originales y la textura granulada de sus conversores A/D de 12 bits. Brinda esos espacios tridimensionales masivos, colas densas y la exuberancia ambiental inolvidable que definió las producciones ochenteras y la música de cine.",
+      "idealFor": "1. Pop ochentero/Synthwave: Cajas masivas (gated) y sintetizadores.\n\n2. Pads ambientales: Colchones masivos que no pierden claridad.\n\n3. Voces amplias: Otorga grandeza cinemática y envolvente.",
+      "qualities": "1. Conversores 12-bit: Textura vintage o procesado moderno.\n\n2. Crossover dividido: Tiempos de caída independientes por frecuencia.\n\n3. Algoritmos clásicos: Concert Hall, Plate, Room y Vocal Building."
+    },
+    {
+      "row": 17,
+      "developer": "Arturia",
+      "plugin": "INTENSITY",
+      "type": "Reverb",
+      "subgroup": "Granular",
+      "description": "El Arturia Rev INTENSITY es un procesador espacial algorítmico moderno que trasciende el hardware vintage, incorporando modulación de envolvente interactiva, congelamiento de cola (freeze) y pitch-shifting integrado. Permite construir desde salas hiperrealistas y puras hasta atmósferas sci-fi masivas y nubes ambientales en constante mutación.",
+      "idealFor": "1. Sound Design Sci-Fi: Construye espacios irreales y cinemáticos.\n\n2. Nubes ambientales: Usa el Freeze para crear drones infinitos.\n\n3. Transiciones electrónicas: Pitch-shifting en la cola de reverb.",
+      "qualities": "1. Seguidor de Envolvente: Reacciona a la dinámica de entrada.\n\n2. Efectos en la cola: Aplica pitch-shift y modulación interna.\n\n3. Limitador suave: Evita picos en retroalimentaciones altas."
+    },
+    {
+      "row": 18,
+      "developer": "Arturia",
+      "plugin": "COLDFIRE",
+      "type": "Distorsión",
+      "subgroup": "Granular",
+      "description": "El Arturia Dist COLDFIRE es un procesador dual de distorsión y saturación de nueva generación que combina 11 algoritmos analógicos y digitales con una potente matriz de modulación. Permite desde un engrosamiento armónico sutil hasta la destrucción sonora multibanda más agresiva, redefiniendo las posibilidades del sound design moderno.",
+      "idealFor": "1. Bajos de Bass Music/Dubstep: Tonos agresivos y rasposos.\n\n2. Baterías rítmicas: Distorsión multibanda para loops masivos.\n\n3. Saturación paralela: Aumenta presencia en sintetizadores secos.",
+      "qualities": "1. 11 Algoritmos: Cinta, válvulas, transformadores y tablas digital.\n\n2. Ruteo Dual: Serie, paralelo, banda dividida o Mid/Side.\n\n3. Moduladores complejos: LFOs dibujables y seguidores de caos."
+    },
+    {
+      "row": 19,
+      "developer": "Arturia",
+      "plugin": "TUBE-CULTURE",
+      "type": "Saturación",
+      "subgroup": "Valvulas",
+      "description": "El Arturia Dist TUBE-CULTURE recrea fielmente el afamado distorsionador a válvulas Thermionic Culture Vulture, emulando el comportamiento extremo de sus tubos en modos Triodo y Pentodo. Entrega desde una calidez analógica envolvente hasta una saturación crujiente y destructiva que inyecta vida, actitud y presencia a cualquier pista.",
+      "idealFor": "1. Bus de batería: Calidez, pegada y cuerpo analógico.\n\n2. Bajos sintéticos/eléctricos: Añade actitud para cortar en la mezcla.\n\n3. Voces en paralelo: Armónicos de válvula para texturas raspadas.",
+      "qualities": "1. Triodo y Pentodo: Armónicos pares suaves o impares cortantes.\n\n2. Control de Bias P2/P3: Simula válvulas desgastadas/hambrientas.\n\n3. Preservación de graves: Mantiene intacto el subgrave."
+    },
+    {
+      "row": 20,
+      "developer": "Arturia",
+      "plugin": "OPAMP-21",
+      "type": "Distorsión",
+      "subgroup": "Estado solido",
+      "description": "El Arturia Dist OPAMP-21 emula el clásico preamplificador de rack SansAmp PSA-1, capturando la respuesta directa, crujiente y directa de sus circuitos basados en amplificadores operacionales. Otorga una mordida analógica rasposa, un ataque medio punzante y un carácter de amplificador directo perfecto para destacar en la mezcla.",
+      "idealFor": "1. Bajos por línea (DI): Carácter de amplificador de bajo clásico.\n\n2. Cajas de ritmo (808/909): Textura industrial y rasposa.\n\n3. Guitarras/Sintes Lead: Ataque medio que resalta en la mezcla.",
+      "qualities": "1. Emulación de Ampli: Controles Buzz, Punch, Crunch y Drive.\n\n2. EQ Activa: Recorte y realce agresivo de extremos.\n\n3. Mezcla Dry/Wet: Saturación paralela directa dentro del plugin."
+    },
+    {
+      "row": 21,
+      "developer": "Arturia",
+      "plugin": "MELLO-FI",
+      "type": "Lo-Fi",
+      "subgroup": "",
+      "description": "El Arturia Tape MELLO-FI extrae el alma de la cinta magnética del icónico Mellotron V, modelando la fluctuación mecánica de su motor, su preamp crujiente y la pérdida de ancho de banda. Impregna cualquier pista digital con una estética Lo-Fi, una calidez nostálgica y un bamboleo de tono encantadoramente imperfecto.",
+      "idealFor": "1. Beats Lo-Fi Hip Hop: Desafinación y crujido de vinilo/cinta.\n\n2. Pianos fríos: Transforma pianos digitales en muestras gastadas.\n\n3. Sintetizadores estáticos: Aporta movimiento orgánico de tono.",
+      "qualities": "1. Sección Wow & Flutter: Variaciones mecánicas de velocidad.\n\n2. Preamp de cinta: Compresión suave y saturación alta.\n\n3. Tape Stop interactivo: Efecto de frenado de cinta en tiempo real."
+    },
+    {
+      "row": 22,
+      "developer": "Arturia",
+      "plugin": "Filter MINI",
+      "type": "Filtro",
+      "subgroup": "Emulación",
+      "description": "El Arturia Filter MINI recrea minuciosamente el emblemático filtro pasa-bajo de escalera de transistores del Minimoog, modelando la saturación de entrada de su circuito y la resonancia orgánica analógica. Otorga barridos cremosos, un calor armónico único y una pegada subgrave legendaria con herramientas de modulación digital extendidas.",
+      "idealFor": "1. Barridos en sintetizadores: Aperturas de filtro suaves en pads.\n\n2. Engrosar bajos: Saturación de entrada para añadir armónicos.\n\n3. Filtrado rítmico: LFO sincronizado para oscilaciones musicales.",
+      "qualities": "1. Envolvente dedicada: Tiempos de ataque, decaimiento y sostén.\n\n2. Secuenciador por pasos: Modulación rítmica del corte.\n\n3. Circuit Drive: Distorsión por sobrecarga de transistores."
+    },
+    {
+      "row": 23,
+      "developer": "Arturia",
+      "plugin": "Filter M12",
+      "type": "Filtro",
+      "subgroup": "Emulación",
+      "description": "El Arturia Filter M12 emula el complejo sistema de filtros analógicos del sintetizador Oberheim Matrix-12, capturando la riqueza de sus 15 modos de filtrado y su sonido estéreo expansivo. Permite crear movimientos tímbricos avanzados, filtrados rítmicos en paralelo y texturas dinámicas con una profundidad modular sin precedentes.",
+      "idealFor": "1. Pads complejos: Movimientos de frecuencia opuestos en L y R.\n\n2. Secuencias avanzadas: Cambia de tipo de filtro en arpegios.\n\n3. Filtrado estéreo: Separa frecuencias de corte por canal.",
+      "qualities": "1. 15 Modos de Filtro: Combinaciones pasa-bajo, alto, banda y muesca.\n\n2. Matriz de modulación: Conexiones modulares totalmente visuales.\n\n3. Canal Dual con desfase: Filtros en paralelo o serie por canal."
+    },
+    {
+      "row": 24,
+      "developer": "Arturia",
+      "plugin": "Chorus JUN-6",
+      "type": "Chorus",
+      "subgroup": "Emulación",
+      "description": "El Arturia Chorus JUN-6 recrea con precisión el emblemático circuito de modulación analógica Bucket Brigade (BBD) del sintetizador Roland Juno-106. Otorga esa anchura estéreo instantánea, calidez envolvente e iluminación tonal ochentera característicos con la máxima simplicidad de uso.",
+      "idealFor": "1. Pianos y sintes secos: Anchura estéreo instantánea estilo 80s.\n\n2. Bajos sintéticos: Modo I para mover el bajo sin perder el centro.\n\n3. Guitarras limpias: Textura fluida estilo New Wave o Post-Punk.",
+      "qualities": "1. Botones Preset (I, II, I+II): Configuraciones clásicas de hardware.\n\n2. Controles manuales: Ajustes modernos de Rate y Depth.\n\n3. Ruido BBD opcional: Siseo blanco analógico del circuito original."
+    },
+    {
+      "row": 25,
+      "developer": "Arturia",
+      "plugin": "Chorus DIMENSION-D",
+      "type": "Chorus",
+      "subgroup": "Emulación",
+      "description": "El Arturia Chorus DIMENSION-D emula rigurosamente el legendario procesador estéreo Roland SDD-320 Dimension D, recreando la interacción de sus circuitos BBD sin desafinar la fuente. Aporta una espacialización sutil, un ancho estéreo tridimensional y un aire analógico cristalino que hace flotar los elementos en la mezcla.",
+      "idealFor": "1. Coros y voces secundarias: Separa coros abriéndolos a los lados.\n\n2. Guitarras acústicas: Ancho estéreo natural sin duplicar tomas.\n\n3. Sintetizadores Lead: Otorga dimensión manteniendo el centro mono.",
+      "qualities": "1. Botones combinables (1 a 4): Aumenta la profundidad espacial.\n\n2. Alineación de fase: Sin problemas de fase indeseados.\n\n3. LFO conmutable: Nuevas formas de onda de espacialización."
+    },
+    {
+      "row": 26,
+      "developer": "Arturia",
+      "plugin": "Phaser BI-TRON",
+      "type": "Phaser",
+      "subgroup": "Emulación",
+      "description": "El Arturia Phaser BI-TRON recrea minuciosamente el codiciado pedal dual de phaser óptico Mu-Tron Bi-Phase de los 70, emulando la respuesta no lineal de sus fotorresistencias y su ruteo flexible. Entrega barridos espaciales profundos, un movimiento de fase orgánico e hipnótico y una textura psicodélica inigualable.",
+      "idealFor": "1. Rhodes y Clavinet: Efecto clásico para soul y funk ochentero.\n\n2. Guitarras rítmicas: Barridos complejos en 3D alrededor de la cabeza.\n\n3. Pads sintéticos: Movimiento continuo para evitar notas estáticas.",
+      "qualities": "1. Dos Phasers independientes: Ruteo en serie, paralelo o L/R.\n\n2. Respuesta Óptica: Modela fotorresistencias analógicas reales.\n\n3. Modulación cruzada: El LFO de A puede modular la frecuencia de B."
+    },
+    {
+      "row": 27,
+      "developer": "Arturia",
+      "plugin": "Flanger BL-20",
+      "type": "Flanger",
+      "subgroup": "Emulación",
+      "description": "El Arturia Flanger BL-20 emula la rara unidad de rack analógica Bel BF-20, capturando la respuesta de su retardo Bucket Brigade y su capacidad de modulación por flujo de aire. Ofrece desde un ensanchamiento estéreo elegante hasta un barrido estilo \"reactivo de avión\" con cancelación de fase radical.",
+      "idealFor": "1. Drum loops: Flanger rítmico para pasajes de transición.\n\n2. Solos de guitarra: Textura metálica que alarga el sostén.\n\n3. Efectos de barrido: Procesa ruido blanco para simular despegues.",
+      "qualities": "1. Fuentes de modulación: LFO, seguidor de envolvente o manual.\n\n2. Realimentación invertida: Tonalidades metálicas tipo hollow.\n\n3. Zero-Crossing: Cancelación de fase total emulando cintas."
+    },
+    {
+      "row": 28,
+      "developer": "Arturia",
+      "plugin": "Efx MOTIONS",
+      "type": "Texturas",
+      "subgroup": "Granular",
+      "description": "El Arturia Efx MOTIONS es una estación de efectos rítmicos moderna que combina moduladores LFO dibujables, secuenciadores por pasos, filtros y repetidores de volumen. Transforma pistas estáticas e inanimadas en secuencias percusivas, cortes rítmicos y pasajes en movimiento con un control creativo absoluto.",
+      "idealFor": "1. Pads estáticos: Convierte notas largas en secuencias rítmicas.\n\n2. Loops de batería: Cortes, repeticiones y filtrados en el compás.\n\n3. Transiciones: Subidas complejas modulando volumen, pitch y FX.",
+      "qualities": "1. 5 Módulos de FX: Filtro, Volumen/Pan, Drive, Repeat y FX extra.\n\n2. Diseñador de LFO libre: Dibuja curvas rítmicas personalizadas.\n\n3. Secuenciador por pasos: Cambios de efecto precisos al tempo."
+    },
+    {
+      "row": 29,
+      "developer": "Arturia",
+      "plugin": "Efx FRAGMENTS",
+      "type": "Texturas",
+      "subgroup": "Granular",
+      "description": "El Arturia Efx FRAGMENTS es un avanzado procesador granular en tiempo real que descompone la señal entrante en micro-granos de audio para reensamblarlos con pitch-shifting y cuantización armónica. Permite construir nubes de textura ambiental, retrasos glitheados y paisajes sonoros cinemáticos de alta definición.",
+      "idealFor": "1. Voces a Pads: Transforma frases en colchones armónicos.\n\n2. Glitch en baterías: Descompone loops en micro-fragmentos.\n\n3. Atmósferas cinemáticas: Genera texturas afinadas a una escala.",
+      "qualities": "1. 3 Modos granulares: Classic, Texture y Rhythmic.\n\n2. Cuantización por escalas: Fuerza los granos a notas afinadas.\n\n3. Spatial & Delay: Distribución 3D y retardo secundario."
+    },
+    {
+      "row": 30,
+      "developer": "Arturia",
+      "plugin": "Efx REFRACT",
+      "type": "Texturas",
+      "subgroup": "Granular",
+      "description": "El Arturia Efx REFRACT es un procesador de espacialización y unísono multi-voz que duplica el audio en hasta 8 voces paralelas dotadas de efectos independientes como filtros, distorsión o delay. Ofrece una dispersión estéreo masiva, capas de refracción tímbrica y una dimensión sonora moderna e impactante.",
+      "idealFor": "1. Super-espacialización vocal: Multiplica la voz en un coro ancho.\n\n2. Leads masivos: Otorga grosor y capas a sintetizadores mono.\n\n3. Arpegios refractados: Dispersión estéreo de notas en 3D.",
+      "qualities": "1. Unísono hasta 8 voces: Controles de dispersión y desfase.\n\n2. FX por voz: Cada voz procesa filtros, distorsión o delay distintos.\n\n3. Visualizador gráfico: Muestra la refracción en el espacio."
+    },
+    {
+      "row": 31,
+      "developer": "Arturia",
+      "plugin": "Bus FORCE",
+      "type": "Procesador de Bus",
+      "subgroup": "Emulación",
+      "description": "El Arturia Bus FORCE es una potente consola de procesamiento en paralelo que integra filtro de estado variable, ecualizador de inducción, compresor VCA y saturador en una arquitectura de triple bus. Aporta cohesión, densidad armónica y una pegada analógica quirúrgica pensada para elevar la calidad de subgrupos y mezclas completas.",
+      "idealFor": "1. Bus de batería: Pegada, control dinámico y limpieza de graves.\n\n2. Bus de sintetizadores: Cohesión y brillo en arreglos cargados.\n\n3. Saturación/Compresión en paralelo: Mezcla limpia + procesada.",
+      "qualities": "1. 3 Rutas Paralelas: Canales Dry, Compresor y Saturador.\n\n2. Módulos vintage: Curvas de EQ e inductores de alta calidad.\n\n3. Matriz de ruteo: Cambia el orden interno de procesadores."
+    },
+    {
+      "row": 32,
+      "developer": "Arturia",
+      "plugin": "Bus EXCITER-104",
+      "type": "Excitador",
+      "subgroup": "Emulación",
+      "description": "El Arturia Bus EXCITER-104 recrea el legendario excitador aural psicoacústico Aphex Aural Exciter 104, emulando la generación de armónicos sintéticos en agudos y el realce de subgraves Big Bottom. Aporta presencia, aire cristalino y un impacto grave profundo sin inflar los niveles de pico ni comprometer el headroom.",
+      "idealFor": "1. Resaltar voces: Presencia y claridad en consonantes sin asperezas.\n\n2. Tomas oscuras: Devuelve el brillo a guitarras o platillos opacos.\n\n3. Grave en altavoces pequeños: Armónicos para audibilidad móvil.",
+      "qualities": "1. Doble procesamiento: Agudos (Exciter) + Graves (Big Bottom).\n\n2. Síntesis armónica: Armónicos en fase sin subir ganancia de EQ.\n\n3. Mezcla directa: Ajuste preciso de armónicos sobre la señal seca."
+    },
+    {
+      "row": 33,
+      "developer": "Arturia",
+      "plugin": "Pigments",
+      "type": "Sintetizador",
+      "subgroup": "Granular",
+      "description": "El Arturia Pigments es el sintetizador híbrido de vanguardia de la marca, que integra motores de Tabla de Ondas, Analógico Virtual, Muestra/Granular y Aditivo con una matriz de modulación visual por código de colores. Ofrece infinitas posibilidades de sound design, combinando un sonido masivo y moderno con una usabilidad impecable.",
+      "idealFor": "1. Sound Design todoterreno: Desde bajos EDM hasta cinescape.\n\n2. Pads complejos: Granular + wavetable para atmósferas vivas.\n\n3. Leads/Bajos dinámicos: LFOs y secuenciadores en movimiento.",
+      "qualities": "1. 4 Motores de síntesis: Tabla de ondas, Analógico, Sample/Aditivo.\n\n2. Modulación por colores: Mapa visual intuitivo de conexiones.\n\n3. Doble filtro: Emulaciones analógicas y filtros digitales."
+    },
+    {
+      "row": 34,
+      "developer": "Arturia",
+      "plugin": "Mini V",
+      "type": "Sintetizador",
+      "subgroup": "Emulación",
+      "description": "El Arturia Mini V recrea minuciosamente el legendario sintetizador analógico monofónico Minimoog Model D, modelando sus tres osciladores de transistores y su célebre filtro en escalera de 24dB. Entrega los bajos más potentes, los leads cortantes y la calidez analógica indiscutible que cimentaron la historia de la música contemporánea.",
+      "idealFor": "1. Bajos analógicos: Potencia y profundidad inmediata en mono.\n\n2. Leads Funk/Progresivo: Timbres solistas que cortan en la mezcla.\n\n3. Efectos analógicos: Caídas, sirenas y ruidos por modulación cruzada.",
+      "qualities": "1. 3 Osciladores ultradensos: Desafinación rica para sonido mono.\n\n2. Filtro en escalera: Tono cálido clásico que conserva el cuerpo.\n\n3. Herramientas extendidas: Arpegiador y matriz de modulación extra."
+    },
+    {
+      "row": 35,
+      "developer": "Arturia",
+      "plugin": "Prophet-5 V",
+      "type": "Sintetizador",
+      "subgroup": "Emulación",
+      "description": "El Arturia Prophet-5 V emula meticulosamente el icónico sintetizador polifónico Sequential Circuits Prophet-5, capturando el comportamiento no lineal de sus voces analógicas y su célebre sección Poly-Mod. Aporta acordes potentes, pads envolventes y una calidez orgánicamente rica que definió el Pop y la Música Electrónica.",
+      "idealFor": "1. Acordes Synthwave: Carácter ochentero en secuencias rítmicas.\n\n2. Pads cálidos: Colchones analógicos que rellenan sin molestar.\n\n3. Bajos polifónicos: Patrones rítmicos de múltiples notas.",
+      "qualities": "1. Sección Poly-Mod: Modulación de oscilador 2 sobre oscilador 1.\n\n2. Modela imperfecciones de voz: Desafinaciones orgánicas reales.\n\n3. Efectos integrados: Delays, reverbs y modulación incorporados."
+    },
+    {
+      "row": 36,
+      "developer": "Arturia",
+      "plugin": "Jup-8 V",
+      "type": "Sintetizador",
+      "subgroup": "Emulación",
+      "description": "El Arturia Jup-8 V recrea con absoluta fidelidad el buque insignia analógico Roland Jupiter-8, modelando su arquitectura de voz dual, sus osciladores cristalinos y su filtro estéreo. Otorga pads majestuosos, arpegiadores brillantes y una presencia tridimensional expansiva imprescindible para producciones Synthwave y Pop.",
+      "idealFor": "1. Pads ultra-anchos: Atmósferas majestuosas para Pop y Cine.\n\n2. Arpegios cristalinos: Respuesta rápida para secuencias veloces.\n\n3. Metales sintéticos (Brass): Sonidos épicos de apertura estilo 80s.",
+      "qualities": "1. Voz Dual/Split: Capas de dos sonidos o división de teclado.\n\n2. Filtro Pasa-Altos/Bajo: Control preciso para evitar sonido turbio.\n\n3. Secuenciador/Arpegiador: Herramientas de patrones rítmicos."
+    },
+    {
+      "row": 37,
+      "developer": "Arturia",
+      "plugin": "DX7 V",
+      "type": "Sintetizador",
+      "subgroup": "Emulación",
+      "description": "El Arturia DX7 V emula el revolucionario sintetizador de frecuencia modulada Yamaha DX7 de 1983, reimaginando su motor de 6 operadores mediante una interfaz gráfica intuitiva y envolventes ampliadas. Entrega pianos eléctricos icónicos, campanas metálicas cristalinas y bajos digitales punzantes con total facilidad de programación.",
+      "idealFor": "1. Pianos eléctricos ochenteros: Tono brillante clásico de baladas.\n\n2. Bajos FM percusivos: Ataque metálico para House y Synthpop.\n\n3. Campanas y vidrios: Complejidad armónica en timbres digitales.",
+      "qualities": "1. 6 Operadores gráficos: Envolventes dibujables visualmente.\n\n2. Algoritmos interactivos: Mapa visual de moduladoras y portadoras.\n\n3. Secuenciador y FX: Matriz moderna de modulación y efectos."
+    },
+    {
+      "row": 38,
+      "developer": "Arturia",
+      "plugin": "Stage-73 V",
+      "type": "Piano",
+      "subgroup": "Emulación",
+      "description": "El Arturia Stage-73 V utiliza tecnología avanzada de modelado físico para emular los pianos electromecánicos Fender Rhodes Stage 73, recreando la respuesta dinámica de sus martillos, lengüetas y caja de resonancia. Aporta un tono cálido, acampanado y orgánico sin saltos de capa de velocidad, complementado con pedalera vintage.",
+      "idealFor": "1. Neo-Soul, Jazz y Funk: Tono acampanado y orgánico característico.\n\n2. Acompañamiento Pop: Rellena el centro de la mezcla suavemente.\n\n3. Acordes R&B: Expresividad en pasajes suaves o rasgados.",
+      "qualities": "1. Modelado Físico sin muestras: Ajuste de lengüetas y micros.\n\n2. Pedalera Vintage: Chorus, Phaser, Wah-Wah y Delay.\n\n3. Ampli de tubo: Simulación de altavoces a válvulas y salas."
+    },
+    {
+      "row": 39,
+      "developer": "Arturia",
+      "plugin": "Piano V",
+      "type": "Piano",
+      "subgroup": "Emulación",
+      "description": "El Arturia Piano V es una suite de pianos de cola y verticales generados íntegramente por modelado físico, permitiendo controlar variables como la tensión de cuerdas, posición de micrófonos y resonancia simpática. Entrega una respuesta expresiva hiperrealista, riqueza armónica y versatilidad acústica sin requerir gigabytes de muestras.",
+      "idealFor": "1. Cine y Música Clásica: Interpretación hiperrealista y expresiva.\n\n2. Arreglos Pop/Rock: Modelos verticales brillantes que destacan.\n\n3. Maquetación rápida: Carga instantánea sin consumir mucha RAM.",
+      "qualities": "1. 12 Modelos Mecánicos: Pianos de cola, verticales y conceptuales.\n\n2. Controles Físicos: Resonancia simpática, pedales y martillos.\n\n3. Sin Gigabytes de Samples: Generado 100% por algoritmos."
+    },
+    {
+      "row": 40,
+      "developer": "Arturia",
+      "plugin": "Analog Lab Pro",
+      "type": "Librería / Contenedor",
+      "subgroup": "Emulación",
+      "description": "El Arturia Analog Lab Pro es una potente estación de trabajo unificada que da acceso instantáneo a miles de presets legendarios extraídos de toda la V Collection y Pigments. Combina un navegador inteligente por etiquetas, asignación rápida de macros y un modo Stage optimizado para la producción rápida y la interpretación en vivo.",
+      "idealFor": "1. Actuaciones en directo: Cambio instantáneo de parches MIDI.\n\n2. Composición rápida: Búsqueda ágil por géneros y etiquetas.\n\n3. Productores prácticos: Usa presets de alta calidad sin programar.",
+      "qualities": "1. Navegador Unificado: Filtra por Bass, Pad, Lead o estilo musical.\n\n2. 4 Macros automáticas: Controles Bright, Timbre, Time y Movement.\n\n3. Modo Stage: Organiza Setlists completos para tocar en vivo."
+    },
+    {
+      "row": 41,
+      "developer": "Baby Audio",
+      "plugin": "BA-1",
+      "type": "Sintetizador",
+      "subgroup": "Emulación",
+      "description": "Emulación expandida del sintetizador analógico portátil Yamaha CS-01 de 1982. A pesar de la simplicidad del hardware original, Baby Audio añadió un segundo oscilador, modulación FM cruzada y un motor de envejecimiento de componentes. Entrega un sonido analógico crudo, cálido e imperfecto con estética lo-fi instantánea.",
+      "idealFor": "1. Bajos Synthwave y Retrowave: Combina la modulación FM con el drenaje de batería para lograr subgraves rugosos con textura analógica.\n\n2. Leads nostálgicos: Activa la emulación del altavoz interno para filtrar los agudos y simular la acústica de un reproductor portátil.\n\n3. Texturas Lo-Fi Hip Hop: Ajusta el control Battery al 40% para introducir variaciones de voltaje que desafinan el tono de forma orgánica.",
+      "qualities": "1. Simulación de Caída de Batería (Battery): Modela el comportamiento del circuito al perder voltaje, introduciendo distorsión y fluctuación tonal.\n\n2. Efectos Vintage Integrados: Incluye drive de circuito, respuesta de altavoz pequeño y un delay analógico dentro de la misma interfaz.\n\n3. Síntesis FM Abierta: Permite modular la forma de onda del primer oscilador con el segundo para timbres metálicos y percusivos."
+    },
+    {
+      "row": 42,
+      "developer": "Baby Audio",
+      "plugin": "Atoms",
+      "type": "Sintetizador",
+      "subgroup": "Granular",
+      "description": "Motor de síntesis de vanguardia basado en un modelo físico de masas y resortes (mass-spring network). Simula interacciones acústicas del mundo real (cuerdas frotadas, percutidas o punteadas) y las combina con procesamiento granular para crear paisajes sonoros cinemáticos y timbres nunca antes escuchados.",
+      "idealFor": "1. Cinescapes y Diseños de Sonido: Ideal para bandas sonoras que requieran atmósferas orgánicas pero alienígenas con evolución continua.\n\n2. Plucks y Percusiones Experimentales: Ajusta la tensión de los resortes para obtener sonidos percusivos con resonancias metálicas o de madera.\n\n3. Texturas Rítmicas en Vivo: Modula la fuerza de excitación mediante automatización para generar cambios tímbricos expresivos.",
+      "qualities": "1. Motor Físico Mass-Spring: Algoritmo dinámico que calcula la energía acústica y la vibración entre múltiples nodos interconectados.\n\n2. Parámetro Chaos: Introduce inestabilidad matemática en los resortes para crear variaciones orgánicas e irrepetibles.\n\n3. Visualizador 3D Interactivo: Representación gráfica del sistema de masas en tiempo real para un control intuitivo de la física del sonido."
+    },
+    {
+      "row": 43,
+      "developer": "Baby Audio",
+      "plugin": "Humanoid",
+      "type": "Procesador Vocal",
+      "subgroup": "Tuning",
+      "description": "Procesador de afinación y síntesis vocal en tiempo real diseñado para reescribir la voz humana. Utiliza un motor de transformación espectral FFT que analiza los formantes e intensidad de la voz entrante y la sustituye por formas de onda sintetizadas reafinables mediante teclado o secuencias MIDI.",
+      "idealFor": "1. Efectos de Voz Hyperpop y EDM: Consigue afinaciones extremas e instantáneas con una textura electrónica dura e incisiva.\n\n2. Coros Sintéticos por MIDI: Envía acordes MIDI para transformar una toma vocal solista en una pared de armonías robóticas tridimensionales.\n\n3. Diseño de Criaturas Sci-Fi: Desplaza los formantes hacia extremos graves o agudos para alterar el género y tamaño de la voz.",
+      "qualities": "1. Resíntesis FFT en Tiempo Real: Reemplaza el timbre vocal por osciladores de sintetizador manteniendo la inteligibilidad y dinámica original.\n\n2. Manipulación de Formantes Avanzada: Permite alterar la resonancia del tracto vocal sin desafinar la nota fundamental.\n\n3. Cadena de FX Dedicada: Incluye de-esser espectral, saturador de tubo, reverb y maximizador optimizados para señales vocales."
+    },
+    {
+      "row": 44,
+      "developer": "Baby Audio",
+      "plugin": "Transit 2",
+      "type": "Texturas",
+      "subgroup": "Granular",
+      "description": "La versión evolucionada del procesador rítmico creado junto al productor Andrew Huang. Permite encadenar más de 18 módulos de efectos independientes y controlar docenas de parámetros simultáneamente a través de una sola perilla Macro global o mediante un secuenciador de movimiento sincronizado al tempo.",
+      "idealFor": "1. Subidas y Drops en EDM/Pop: Automatiza la perilla Macro durante 4 u 8 compases para acumular tensión mediante filtros, reversas y bitcrushing.\n\n2. Movimiento Rítmico en Bucles: Utiliza el Motion Sequencer interno en modo LFO para aplicar filtrados y retardos dinámicos a la batería.\n\n3. Transiciones entre Secciones: Crea variaciones de textura drásticas al pasar del verso al estribillo sin requerir múltiples automatizaciones.",
+      "qualities": "1. Macro Global Unificado: Controla mapas de parámetros complejos de hasta 18 efectos desde una sola perilla o automatización.\n\n2. Motion Sequencer Avanzado: Secuenciador por pasos y formas de onda dibujables para automatizar la macro rítmicamente.\n\n3. Nuevos Módulos V2: Incorpora procesadores de Warp, Pitch Shifting moderno, filtros de estado variable y moduladores de fase."
+    },
+    {
+      "row": 45,
+      "developer": "Baby Audio",
+      "plugin": "Transit (V1)",
+      "type": "Texturas",
+      "subgroup": "Granular",
+      "description": "La versión original del revolucionario diseñador de transiciones desarrollado con Andrew Huang. Condensa el flujo de trabajo de automatización compleja en un único deslizador principal capaz de modificar múltiples módulos de procesamiento de manera coordinada.",
+      "idealFor": "1. Transiciones Rápidas en Maquetas: Aplica elevaciones de tensión rítmicas en cuestión de segundos en arreglos de música electrónica.\n\n2. Efectos de Impacto: Automatiza caídas de filtro y reversas de delay al inicio de estribillos para maximizar el contraste.",
+      "qualities": "1. Navegación Intuitiva de Módulos: Interfaz limpia con 18 efectos esenciales fáciles de activar y asignar a la macro.\n\n2. Sincronización a BPM: Todos los tiempos de modulación y cortes se acoplan perfectamente al tempo del proyecto."
+    },
+    {
+      "row": 46,
+      "developer": "Baby Audio",
+      "plugin": "Crystalline",
+      "type": "Reverb",
+      "subgroup": "Granular",
+      "description": "Procesador de reverberación algorítmica de última generación diseñado específicamente para producciones modernas. A diferencia de las reverbs analógicas que buscan recrear salones reales, Crystalline ofrece espacios virtuales hiper-limpios cuyos tiempos de ataque y decaimiento se sincronizan milimétricamente al tempo del proyecto.",
+      "idealFor": "1. Voces Pop Modernas: Genera colas espaciosas y brillantes sin enmascarar la inteligibilidad gracias a las funciones de ducking e interpolación.\n\n2. Sintetizadores y Arpegios: Ajusta el tiempo de caída en valores musicales (ej. 1/2 nota) para que la reverberación respire con el ritmo.\n\n3. Cajas y Percusiones: Utiliza los filtros de corte de alta y baja frecuencia integrados para contener la energía en los medios.",
+      "qualities": "1. Sincronización de Tiempo al BPM: Permite fijar el Pre-Delay y Decay Time en subdivisiones rítmicas exactas (corcheas, negras, etc.).\n\n2. Módulo de Ducking & Gate: Atenúa automáticamente la cola de la reverb cuando detecta señal seca de entrada.\n\n3. Sección de Shape & Size: Controla la densidad de las reflexiones tempranas y la geometría del espacio virtual."
+    },
+    {
+      "row": 47,
+      "developer": "Baby Audio",
+      "plugin": "Smooth Operator Pro",
+      "type": "EQ",
+      "subgroup": "Supresor de resonancias",
+      "description": "Edición ampliada y profesional del supresor de resonancias espectral. Utiliza un algoritmo de procesamiento FFT de alta resolución que analiza el espectro de audio en tiempo real para detectar e igualar picos de frecuencia hirientes, asperezas y resonancias de sala de manera automatizada.",
+      "idealFor": "1. Tratamiento Vocal Avanzado: Elimina el sonido encajonado de las frecuencias medias y suaviza las sibilantes en tomas vocales agresivas.\n\n2. Guitarras Acústicas y Eléctricas: Controla la resonancia acumulada en el rango de los 2 kHz a 4 kHz sin restar presencia ni brillo.\n\n3. Mastering y Buses Principales: Aplica un balance espectral sutil para cohesionar mezclas que presentan acumulación de frecuencias graves o agudas.",
+      "qualities": "1. Procesamiento FFT Espectral Nodal: Permite ajustar umbrales e intensidades en puntos específicos de la curva de frecuencia.\n\n2. Visualización en Tiempo Real: Muestra la reducción de ganancia espectral exacta aplicada a cada banda del espectro.\n\n3. Procesamiento Mid/Side y Sidechain: Permite corregir resonancias únicamente en el centro o los laterales, o activar la supresión desde otra pista."
+    },
+    {
+      "row": 48,
+      "developer": "Baby Audio",
+      "plugin": "Smooth Operator (V1)",
+      "type": "EQ",
+      "subgroup": "Supresor de resonancias",
+      "description": "La versión simplificada y altamente intuitiva del ecualizador espectral dinámico. Ofrece una curva interactiva de 4 nodos que combina compresión, ecualización y supresión de resonancias en una herramienta de corrección rápida para cualquier canal.",
+      "idealFor": "1. Corrección de Resonancias en Pianos: Suaviza los picos de volumen en frecuencias medias-altas en grabaciones de piano digital.\n\n2. Limpieza Rápida de Baterías: Atenúa los armónicos desagradables en tomas de toms o platos en un solo movimiento.",
+      "qualities": "1. Curva Intuitiva de Umbral: Dibujo directo sobre la pantalla para establecer el límite de supresión de forma gráfica.\n\n2. Algoritmo de Balance Automático: Ajusta la intensidad de respuesta basándose en el nivel de energía de la señal de entrada."
+    },
+    {
+      "row": 49,
+      "developer": "Baby Audio",
+      "plugin": "IHNY-2",
+      "type": "Compresor",
+      "subgroup": "Paralela",
+      "description": "La segunda evolución del potente compresor paralelo de estilo Nueva York. Aplica una reducción de ganancia extrema y una marcada curva de ecualización en V (smile curve) a la ruta procesada, logrando inyectar pegada, cuerpo y densidad sin alterar la claridad de los transitorios secos.",
+      "idealFor": "1. Buses de Batería: Destruye la señal procesada para extraer la resonancia de la sala y combínala al 30% con la señal seca para un sonido masivo.\n\n2. Bajos Electrónicos y Eléctricos: Añade presencia y textura en los medios-graves manteniendo el ataque del pulso intacto.\n\n3. Voces de Rock/Pop: Genera una copia ultra-comprimida para asegurar que cada sílaba se mantenga al frente de la mezcla.",
+      "qualities": "1. Matriz Pad XY: Controla la cantidad de compresión (eje Y) y la respuesta tonal de ecualización (eje X) de forma simultánea.\n\n2. Autogain Inteligente: Compensa el volumen percibido para permitir decisiones de mezcla basadas en tono y no en sonoridad.\n\n3. Filtros Punch & Sidechain: Evita que las bajas frecuencias disparen en exceso el compresor y preserva los ataques rápidos."
+    },
+    {
+      "row": 50,
+      "developer": "Baby Audio",
+      "plugin": "I Heart NY (V1)",
+      "type": "Compresor",
+      "subgroup": "Paralela",
+      "description": "El plugin que dio origen a Baby Audio. Un procesador de compresión paralela agresiva diseñado bajo el algoritmo proprietario \"Spank\", enfocado en dar fuerza e impacto inmediato a cualquier fuente percusiva o melódica con mínimos controles.",
+      "idealFor": "1. Guitarras Rítmicas: Inyecta sustento y densidad en paredes de guitarras de rock.\n\n2. Paralelo en Cajas/Snares: Agrega el crujido y la pegada del ambiente con un simple deslizador.",
+      "qualities": "1. Algoritmo Spank: Circuito de compresión diseñado para entregar un aplastamiento dinámico ultramusical.\n\n2. Filtro de Preservación de Graves: Impide que el subgrave ensucie la respuesta de la compresión paralela."
+    },
+    {
+      "row": 51,
+      "developer": "Baby Audio",
+      "plugin": "TAIP",
+      "type": "Saturador",
+      "subgroup": "Cinta",
+      "description": "Procesador de saturación de cinta analógica impulsado por redes neuronales artificiales. En lugar de utilizar emulaciones tradicionales basadas en DSP rígido, TAIP analiza la respuesta compleja de las grabadoras de cinta reales para reproducir la compresión armónica y el desgaste del soporte magnético.",
+      "idealFor": "1. Cohesión en Bus de Mezcla: Aplica una saturación leve para unir los elementos de la mezcla y suavizar los picos digitales duros.\n\n2. Engrosamiento de Sintetizadores: Aporta calidez y armonías impares a pistas de sintetizador secas o frías.\n\n3. Baterías Analógicas: Redondea los transitorios agresivos de los platos y cajas imitando el comportamiento de las cintas de 2 pulgadas.",
+      "qualities": "1. Modelado Neuronal por IA: Emula las no-linealidades dinámicas y la saturación de frecuencia de las máquinas de cinta reales.\n\n2. Controles Model & Wear: Permite alterar el estado de la cinta, desde un equipo de estudio calibrado hasta una cinta desgastada.\n\n3. Saturación en Banda: Posibilidad de aplicar la distorsión de cinta únicamente en rangos de frecuencia específicos."
+    },
+    {
+      "row": 52,
+      "developer": "Baby Audio",
+      "plugin": "Spaced Out",
+      "type": "Reverb / Delay",
+      "subgroup": "",
+      "description": "Estación de efectos espaciales que combina un generador de retardo/eco de 16 pasos, una reverberación algorítmica de gran tamaño y una matriz de modulación estéreo. Permite transformar frases melódicas simples en complejas atmósferas tridimensionales.",
+      "idealFor": "1. Diseño Sonoro para Sintetizadores: Convierte notas individuales en colchones ambientales en constante cambio rítmico.\n\n2. Guitarras Limpias y Arpegios: Crea patrones de retardo estéreo con colas de reverberación moduladas mediante chorus o phaser.\n\n3. Efectos de Voz Etéreos: Genera texturas vocales de fondo para géneros como Ambient, Dream Pop o Shoegaze.",
+      "qualities": "1. Secuenciador de Delay de 16 Pasos: Permite activar o desactivar repeticiones específicas y ajustar su respuesta en el panorama estéreo.\n\n2. Matriz de Modulación Integrada: Aplica efectos de Chorus, Flanger o Pitch Shifting directamente sobre la cola del efecto.\n\n3. Botón Aleatorio (Dice): Genera combinaciones complejas de parámetros al instante para disparar la creatividad."
+    },
+    {
+      "row": 53,
+      "developer": "Baby Audio",
+      "plugin": "Super VHS",
+      "type": "Lo-Fi",
+      "subgroup": "",
+      "description": "Multi-efectos diseñado para inyectar la estética sonora de las cintas de videocasete y el audio ochentero. Reúne seis módulos dedicados: saturación de cinta, fluctuación de tono (pitch drift), ruido estático real, reverb de espacio reducido, chorus BBD y un bitcrusher suave.",
+      "idealFor": "1. Producción Synthwave y Lo-Fi: Otorga el color, grano y desafinación característica de las producciones en formato casete.\n\n2. Teclados y Pianos Eléctricos: Añade una desafinación sutil y textura de ruido para dar un toque nostálgico.\n\n3. Loops de Batería: Aplica el módulo Bad Hall y la saturación para dar la sensación de una muestra extraída de un VHS antiguo.",
+      "qualities": "1. Módulo Static: Ruido de fondo sintético extraído directamente de grabaciones de videocasetes vintage.\n\n2. Algoritmo Magic Switch: Circuito de chorus analógico BBD de un solo botón integrado dentro de la cadena.\n\n3. Efecto Pitch Drift: Genera fluctuaciones de velocidad mecánicas que imitan la tracción de cinta desgastada."
+    },
+    {
+      "row": 54,
+      "developer": "Baby Audio",
+      "plugin": "Parallel Aggressor",
+      "type": "Compresor / Saturador",
+      "subgroup": "Paralela",
+      "description": "Procesador que divide la señal de audio en tres rutas independientes dentro del mismo plugin: la señal limpia original, un bus de compresión extrema (\"HEAT\") y un bus de saturación agresiva (\"SPAT\"). Permite esculpir el tono y el impacto dinámico con total transparencia.",
+      "idealFor": "1. Buses de Batería y Percusión: Combina el cuerpo seco de la batería con la agresión de la compresión y el crujido de la saturación en paralelo.\n\n2. Guitarras Rítmicas y Distorsionadas: Añade grosor y textura armónica en los medios sin perder la definición del ataque de la púa.\n\n3. Bajos: Separa los subgraves limpios e inyecta saturación distorsionada en el canal paralelo para destacar en altavoces pequeños.",
+      "qualities": "1. Arquitectura Triple de Señal: Control independiente de volumen, ecualización y mezcla para las 3 rutas paralelas.\n\n2. Inyectores Tónales Style: Permite cambiar el carácter tímbrico de los buses de compresión y saturación con modos específicos.\n\n3. Autogain de Salida: Mantiene el nivel de volumen equilibrado al aumentar la contribución de las rutas paralelas."
+    },
+    {
+      "row": 55,
+      "developer": "Baby Audio",
+      "plugin": "Comeback Kid",
+      "type": "Delay",
+      "subgroup": "Vintage",
+      "description": "Procesador de retardo versátil que elimina la necesidad de montar cadenas auxiliares complejas. Incluye 14 herramientas de moldeado de señal integradas en la ruta de realimentación, tales como saturación, filtros pasa-alto y pasa-bajo, phaser, ensanchamiento estéreo y ducking.",
+      "idealFor": "1. Delays Vocales Limpios: Ajusta el control Ducker para que las repeticiones bajen de nivel mientras la voz canta y reaparezcan en los pausas.\n\n2. Arpegios de Sintetizador: Aplica el filtro Lo-Fi y el modo Swirl para crear ecos oscuros con modulación espacial.\n\n3. Guitarras Solistas: Configura el retardo en modo Ping-Pong con saturación de cinta para llenar los laterales de la mezcla.",
+      "qualities": "1. Sistema de Ducking Integrado: Atenúa las repeticiones del delay automáticamente según la intensidad de la señal de entrada.\n\n2. Sección Flavor Modules: Ofrece cuatro algoritmos de coloración tonal (Tape, Cheap, Swirl y Lo-Fi).\n\n3. Transient Shaper Incorporado: Permite enfatizar o suavizar el ataque de las repeticiones antes de entrar en la cola de retardo."
+    },
+    {
+      "row": 56,
+      "developer": "Baby Audio",
+      "plugin": "SubCulture",
+      "type": "Excitador",
+      "subgroup": "Bass Enhancer",
+      "description": "Procesador especializado en la generación y refuerzo de bajas frecuencias mediante seguimiento de tono (pitch-tracking). Diseñado para analizar el contenido fundamental de una pista e inyectar un subgrave sintetizado perfectamente afinado y alineado en fase.",
+      "idealFor": "1. Refuerzo de Bajos Delgados: Inyecta notas fundamentales graves a grabaciones de bajo eléctrico o sintético que carecen de peso en el subgrave.\n\n2. Bombos y Kicks de EDM/Urbano: Añade un impacto grave constante y profundo a bombos secos o muestras cortas.\n\n3. Optimización para Altavoces Pequeños: Utiliza el módulo de saturación armónica para hacer audible el bajo en dispositivos móviles.",
+      "qualities": "1. Seguimiento de Tono Inteligente: Detecta la nota musical en tiempo real para generar un subgrave en la misma frecuencia fundamental.\n\n2. Alineación de Fase Dinámica: Mantiene la señal sintetizada en fase con la pista original para evitar cancelaciones indeseadas.\n\n3. Generador de Armónicos Graves: Genera armónicos superiores que permiten percibir el tono del bajo en sistemas sin subwoofers."
+    },
+    {
+      "row": 57,
+      "developer": "Baby Audio",
+      "plugin": "Tekno",
+      "type": "Sintetizador",
+      "subgroup": "Drum machine",
+      "description": "Sintetizador y generador rítmico enfocado en la creación de percusiones electrónicas, golpes industriales, impactos y elementos rítmicos sintéticos. Integra un secuenciador por pasos interno y un motor de modelado de transitorios rápido.",
+      "idealFor": "1. Creación de Baterías Electrónicas: Diseña bombos, cajas y percusiones sintéticas personalizadas para géneros como Techno o Industrial.\n\n2. Secuencias y Rellenos Rítmicos: Utiliza el secuenciador interno para crear patrones de percusión complementarios en las transiciones.\n\n3. Impactos Cinematográficos: Genera efectos de subgrave y golpes metálicos para añadir peso a momentos clave de la producción.",
+      "qualities": "1. Motor de Síntesis Percusiva: Algoritmo de oscilador optimizado para entregar ataques extremadamente ultra-rápidos e impactantes.\n\n2. Secuenciador Integrado: Permite programar ritmos, acentos y variaciones directamente desde la interfaz del plugin.\n\n3. Módulo de Distorsión y Filtrado: Procesa los golpes sintetizados con distorsión agresiva y filtros de corte dinámicos."
+    },
+    {
+      "row": 58,
+      "developer": "Baby Audio",
+      "plugin": "Grainferno",
+      "type": "Texturas",
+      "subgroup": "Granular",
+      "description": "Procesador de efectos y síntesis granular orientado a la fragmentación tímbrica y al diseño sonoro extremo. Toma la señal de audio entrante, la descompone en pequeños fragmentos (grains) y los reordena en capas de sonido espacializadas con pitch-shifting.",
+      "idealFor": "1. Sound Design para Cine y Videojuegos: Transforma cualquier efecto de sonido en atmósferas complejas e impredecibles.\n\n2. Micro-ritmos y Glitch: Descompone bucles de batería en ráfagas de micro-granos para secciones de transición vanguardistas.\n\n3. Pads Atmosféricos a partir de Instrumentos: Transforma grabaciones de guitarra o voz en nubes de sonido sostenidas e hipnóticas.",
+      "qualities": "1. Control Granular Completo: Permite modificar la densidad, el tamaño, la posición de lectura y la dirección de cada grano de audio.\n\n2. Pitch Shifting por Capas: Desplaza armónicamente los granos para crear acordes o texturas desestabilizadas.\n\n3. Matriz de Modulación Dinámica: Modula los parámetros granulares mediante LFOs e envolventes en tiempo real."
+    },
+    {
+      "row": 59,
+      "developer": "Baby Audio",
+      "plugin": "Baby Comeback",
+      "type": "Delay",
+      "subgroup": "Emulación",
+      "description": "Versión gratuita y estilizada del plugin Comeback Kid, desarrollada en colaboración con la revista Computer Music. Ofrece un motor de retardo simplificado equipado con un ducker automático y cuatro selecciones de coloración tonal.",
+      "idealFor": "1. Delays Vocales Rápidos: Asigna un eco rítmico en voces que se aparta automáticamente al cantar sin necesidad de ruteos auxiliares.\n\n2. Guitarras Acústicas y Eléctricas: Aplica retardos con carácter sin complicarse con docenas de parámetros.",
+      "qualities": "1. Ducker Automático Integrado: Reduce el nivel de las repeticiones mientras la señal principal está activa.\n\n2. 4 Sabores Tímbricos: Incluye los modos Wide (estéreo), Analog (cálido), Saucey (modulado) y Cheap (lo-fi).\n\n3. Totalmente Gratuito: Rendimiento y calidad de audio profesional sin costo."
+    },
+    {
+      "row": 60,
+      "developer": "Baby Audio",
+      "plugin": "Keylay",
+      "type": "Delay",
+      "subgroup": "Ping - Pong",
+      "description": "Edición especial limitada del plugin Baby Comeback, creada exclusivamente para los lectores de la revista alemana KEYS Magazine. Ofrece la misma arquitectura de retardo limpio con controles de coloración directa.",
+      "idealFor": "1. Delays en Ping-Pong Estéreo: Genera repeticiones alternadas a los lados en pistas de teclado o sintetizador.\n\n2. Ecos Discretos en Percusión: Agrega profundidad a elementos secundarios sin saturar el espacio central.",
+      "qualities": "1. Motor Tonal de Baby Comeback: Mantiene el algoritmo de retardo de alta calidad con bajo consumo de CPU.\n\n2. Interfaz Simplificada: Cuatro selecciones de carácter tímbrico y ajustes rítmicos directos.\n\n3. Totalmente Gratuito: Edición especial de distribución gratuita."
+    },
+    {
+      "row": 61,
+      "developer": "Baby Audio",
+      "plugin": "Warp",
+      "type": "Modulador",
+      "subgroup": "Tuning",
+      "description": "Herramienta de modulación rítmica y manipulación temporal extraída directamente del motor de Transit 2 (creado junto a Andrew Huang). Permite variar la velocidad de reproducción, el tiempo y el pitch de cualquier pista.",
+      "idealFor": "1. Efectos de Caída / Tape Stop: Crea frenados de cinta y aceleraciones rítmicas al final de frases o compases.\n\n2. Modulación de Pitch en Sintetizadores: Genera desviaciones temporales y variaciones de altura para dar un toque orgánico.\n\n3. Transiciones Rítmicas: Altera la velocidad de pasajes percusivos para crear tensión en las subidas.",
+      "qualities": "1. Control Varispeed Independiente: Permite desacelerar o acelerar el audio imitando motores mecánicos de reproducción.\n\n2. Perilla Stretch Avanzada: Desvincula la variación de tiempo de la variación de tono según las necesidades del diseño sonoro.\n\n3. Totalmente Gratuito: Módulo extraído de Transit 2 distribuido de forma libre."
+    },
+    {
+      "row": 62,
+      "developer": "Baby Audio",
+      "plugin": "Pitch Drift",
+      "type": "Modulador",
+      "subgroup": "Tuning",
+      "description": "Plugin de modulación de tono compacto derivado del algoritmo Drift del sintetizador BA-1. Diseñado para simular las imperfecciones térmicas y fluctuaciones de afinación espontáneas que ocurren en los sintetizadores analógicos reales.",
+      "idealFor": "1. Sintetizadores Digitales e VSTs: Aplica un ligero movimiento de tono a teclados digitales rígidos para darles un carácter analógico.\n\n2. Pianos y Guitarras Vintage: Simula el comportamiento de un instrumento mecánicamente desgastado.\n\n3. Texturas y Coros: Genera una separación de fase suave en pistas duplicadas para ensanchar el estéreo.",
+      "qualities": "1. Algoritmo de Deriva Fluctuante: Genera curvas de desafinación impredecibles sin caer en ciclos repetitivos de LFO clásico.\n\n2. Control con Pantalla Táctil Visual: Interfaz ultra-mínima orientada a ajustar la profundidad y velocidad en segundos.\n\n3. Totalmente Gratuito: Herramienta liviana de procesamiento directo sin impacto significativo en la CPU."
+    },
+    {
+      "row": 63,
+      "developer": "Baby Audio",
+      "plugin": "Magic Switch",
+      "type": "Chorus",
+      "subgroup": "BBD",
+      "description": "Extracción del afamado módulo de chorus analógico BBD incluido originalmente en el plugin Super VHS. Diseñado para recrear la espacialización amplia y cálida del circuito del sintetizador Roland Juno-106 con la simplicidad de un único botón.",
+      "idealFor": "1. Guitarras Limpias y Teclados: Aporta un ancho estéreo instantáneo y un sonido envolvente de inspiración ochentera.\n\n2. Sintetizadores Monofónicos: Convierte líneas solistas o bajos monofónicos en muros estéreo densos sin perder el impacto.",
+      "qualities": "1. Operación mediante Control Único: Ajusta la proporción de procesamiento seco/procesado con un solo deslizador.\n\n2. Emulación de Circuito BBD: Recrea la calidez analógica y la respuesta de frecuencia de los chips Bucket Brigade.\n\n3. Totalmente Gratuito: Uno de los utilitarios de espacialización gratuita más populares del mercado."
+    },
+    {
+      "row": 64,
+      "developer": "Baby Audio",
+      "plugin": "Magic Dice",
+      "type": "Reverb / Delay",
+      "subgroup": "Aleatorio",
+      "description": "Extracción simplificada del motor espacial del plugin Spaced Out. Funciona como un generador aleatorio de efectos que diseña una combinación única e irrepetible de reverberación, retardo y modulación cada vez que se presiona el botón central.",
+      "idealFor": "1. Inspiración Rápida en Sesión: Presiona el botón hasta encontrar un ambiente o textura espacial que encaje con tu pista.\n\n2. Sound Design Inmediato: Aplica configuraciones espaciales complejas sobre voces, guitarras o sintetizadores con un solo clic.",
+      "qualities": "1. Algoritmo de Selección Aleatoria (Dice): Cambia internamente docenas de parámetros ocultos del motor de Spaced Out.\n\n2. Control de Mezcla Simplificado: Permite ajustar únicamente la proporción de efecto deseada sobre la pista.\n\n3. Totalmente Gratuito: Procesador espacial creativo en formato simplificado."
+    },
+    {
+      "row": 65,
+      "developer": "Baby Audio",
+      "plugin": "Beat Slammer",
+      "type": "Compresor",
+      "subgroup": "Paralela",
+      "description": "Extracción directa del potente motor de compresión agresiva del plugin IHNY-2. Está optimizado para inyectar pegada, actitud y una compresión paralela estilo Nueva York a pistas rítmicas con un control extremadamente directo.",
+      "idealFor": "1. Buses de Batería: Aplasta la señal de la batería e inyéctala en paralelo para obtener un sonido gigante y lleno de aire.\n\n2. Loops de Percusión y Cajas: Aumenta la pegada de los transitorios y extiende el sustain de la sala en bucles secos.",
+      "qualities": "1. Algoritmo de Compresión Slam: Aplica una reducción de ganancia severa diseñada para extraer la energía de la señal.\n\n2. Mezclador Dry/Wet Integrado: Permite balancear la señal destruida con la señal seca dentro del propio canal.\n\n3. Totalmente Gratuito: Herramienta de compresión agresiva de alta intensidad."
+    },
+    {
+      "row": 66,
+      "developer": "Acustica audio",
+      "plugin": "Sienna",
+      "type": "Emulacion",
+      "subgroup": "Sala / audifono",
+      "description": "Sistema de calibración binaural y emulación de entornos de escucha. Utiliza muestreo dinámico para corregir la curva de respuesta de más de 150 modelos de auriculares y emular la acústica, respuesta en frecuencia y distancia de monitores en estudios de grabación de clase mundial.",
+      "idealFor": "1. Mezcla con Audífonos: Permite tomar decisiones de balance tonal y posición estéreo como si estuvieras en una sala tratada.\n\n2. Verificación Multi-Sistema: Alterna entre monitores de estudio, altavoces de autos y sistemas domésticos emulados.\n\n3. Control de Subgraves: Evalúa la respuesta de bajas frecuencias sin la distorsión ni cancelaciones de una habitación no acondicionada.",
+      "qualities": "1. Mapeo de Audífonos EQ: Corrección precisa para docenas de marcas y modelos comerciales y profesionales.\n\n2. Algoritmo Binaural VVKT: Recrea la respuesta espacial e interaural de salas físicas de forma hiperrealista.\n\n3. Ajuste de Profundidad y Ángulo: Permite modificar la posición virtual de los altavoces respecto al oyente."
+    },
+    {
+      "row": 67,
+      "developer": "Acustica audio",
+      "plugin": "El Rey 2",
+      "type": "Compresor",
+      "subgroup": "Valvulas",
+      "description": "Compresor a tubos desarrollado junto al productor nominado al Grammy Greg Wells. Recrea un mítico compresor limitador de tubos de los años 50 (RCA BA-6A), famoso por su compresión aterciopelada, tono denso y capacidad para engrosar cualquier fuente sin sonar agresivo.",
+      "idealFor": "1. Voces Principales: Aplica de 2 a 4 dB de reducción para fijar la voz al frente de la mezcla con calidez analógica.\n\n2. Bus de Batería o Master: Aporta pegada musical, cohesión y densidad armónica a grupos de instrumentos.\n\n3. Bajos Eléctricos: Controla la dinámica mientras enriquece los armónicos graves mediante su etapa de tubos.",
+      "qualities": "1. Interfaz Optimizada: Diseñada por Greg Wells para decisiones de compresión rápidas y musicales.\n\n2. Preamplificador Aislable: Permite usar la saturación del circuito de tubos vintage sin aplicar compresión.\n\n3. Filtro Sidechain Interno: Evita que las frecuencias graves disparen la compresión de forma desproporcionada."
+    },
+    {
+      "row": 68,
+      "developer": "Acustica audio",
+      "plugin": "Gold 5",
+      "type": "Channel Strip",
+      "subgroup": "Emulacion",
+      "description": "Suite de procesamiento que emula el sonido de consolas británicas de la serie 80 (Neve 1073, 1081, 1066, 2254, entre otros). Incluye preamplificadores, ecualizadores de bandas paramétricas y compresores discretos de diodo puente para un tono analógico grande y cálido.",
+      "idealFor": "1. Mezcla Estilo Analógico: Inserta el plugin en múltiples canales para replicar el comportamiento de una consola británica.\n\n2. Guitarras de Rock: Utiliza los ecualizadores para esculpir medios agresivos sin introducir asperezas.\n\n3. Buses de Grupo: Suma varias pistas a través de sus preamplificadores para aportar cohesión y armónicos.",
+      "qualities": "1. Múltiples Modelos de EQ y Compresión: Combina módulos de diferentes épocas del fabricante británico.\n\n2. Motor de Preamplificación Ultra-Detallado: Recrea la saturación no lineal de los transformadores analógicos.\n\n3. Bajo Consumo de CPU (Versiones ZL): Incluye variantes de cero latencia para monitoreo durante la grabación."
+    },
+    {
+      "row": 69,
+      "developer": "Acustica audio",
+      "plugin": "Sand 3",
+      "type": "Channel Strip",
+      "subgroup": "Emulacion",
+      "description": "Recreación integral del sonido punchy y quirúrgico de las consolas analógicas británicas de serie 4000 y 9000. Ofrece la flexibilidad de intercambiar etapas de ecualización, preamplificadores y el legendario compresor de bus de VCA que definió el Pop y el Rock moderno.",
+      "idealFor": "1. Buses de Batería: Utiliza el bus compressor para lograr la famosa pegada \"glue\" en las bases rítmicas.\n\n2. Limpieza Quirúrgica: Emula la ecualización estilo Black Knob o Pink Knob para atenuar frecuencias molestas.\n\n3. Mezclas Modernas: Aporta claridad, velocidad de ataque y articulación en proyectos de Pop, Hip-Hop y Rock.",
+      "qualities": "1. Bus Compressor con Shaper: Permite modificar el ataque y la curva del compresor VCA clásico.\n\n2. Sección de Ecualización Conmutable: Intercambia modos de EQ E-series, G-series y consolas modernas.\n\n3. Controles de Routing Avanzados: Configura la cadena de señal interna (EQ antes o después del compresor)."
+    },
+    {
+      "row": 70,
+      "developer": "Acustica audio",
+      "plugin": "Pink 4",
+      "type": "Channel Strip",
+      "subgroup": "Emulacion",
+      "description": "Suite inspirada en el hardware analógico estadounidense de la serie 500 y consolas clásicas API. Destaca por su sonido rápido, abierto, con medios al frente y una pegada transient transitoria muy definida, ideal para dar presencia e impacto inmediato.",
+      "idealFor": "1. Baterías y Percusiones: Realza el impacto del ataque en cajas, bombos y toms mediante su EQ gráfico y paramétrico.\n\n2. Guitarras Eléctricas: Agrega cuerpo e incisividad en los medios-altos para resaltar en mezclas cargadas.\n\n3. Mezclas de Pop e Indietronica: Otorga un carácter dinámico, directo y transparente pero con color analógico.",
+      "qualities": ""
+    },
+    {
+      "row": 71,
+      "developer": "Acustica audio",
+      "plugin": "Purple 3",
+      "type": "EQ",
+      "subgroup": "Pultec",
+      "description": "Recreación de la icónica suite de ecualizadores a tubos pasivos Pultec. Permite realizar el famoso truco de atenuar y realzar la misma frecuencia simultáneamente en los graves, ofreciendo un peso analógico profundo y agudos sedosos sin asperezas.",
+      "idealFor": "1. Bajo y Bombo (Gasto de Graves): Aplica el realce y corte simétrico en 30 Hz o 60 Hz para un subgrave limpio y potente.\n\n2. Bus Master / Voces: Utiliza las bandas agudas para inyectar aire e iluminación sin distorsión estridente.\n\n3. Sintetizadores e Instrumentos: Aporta calidez de tubos y presencia orgánica en frecuencias medias.",
+      "qualities": "1. Modelado Pasivo a Tubos: Recrea la interacción de inductores, condensadores y etapas de amplificación a tubos.\n\n2. Múltiples Unidades Vintage Muestreadas: Incluye variaciones de hardware clásico y modificaciones modernas.\n\n3. Controles de Ancho de Banda (Q): Ajusta la pendiente de las curvas de ecualización pasivas."
+    },
+    {
+      "row": 72,
+      "developer": "Acustica audio",
+      "plugin": "Lime 2",
+      "type": "Channel Strip",
+      "subgroup": "Emulacion",
+      "description": "Suite de procesadores basada en las consolas de formato grande de los años 80 y 90 (Neve VR y VXS). Aporta un sonido más limpio, pulido y extendido en frecuencias que las consolas de los 70, pero con una firma analógica distinguida.",
+      "idealFor": "1. Mezclas Orquestales o Acústicas: Conserva la transparencia del audio mientras aporta dimensión espacial.\n\n2. Voces Pop e Instrumental: Esculpe frecuencias con ecualizadores paramétricos de alta precisión.\n\n3. Mezcla Completa de Canales: Recrea el ruteo de una consola de gran formato en tu estación de trabajo.",
+      "qualities": "1. Múltiples Secciones de Ecualización: Incluye variantes de curvas de consola y unidades fuera de bastidor.\n\n2. Compresores / Limitadores Flexibles: Permite compresión suave o limitación rápida de picos.\n\n3. Módulo de Preamplificación Extenso: Varias opciones de entradas de línea, micro y bus."
+    },
+    {
+      "row": 73,
+      "developer": "Acustica audio",
+      "plugin": "Aquamarine 5",
+      "type": "Compresor",
+      "subgroup": "Mastering",
+      "description": "Emulación del prestigioso compresor de masterización híbrido con etapas de compresión Opto y VCA en serie, sumado a una sección de transformadores de salida conmutables (Níquel, Hierro y Acero) para cambiar el color tonal del master.",
+      "idealFor": "1. Mastering y Bus Principal: Aplica compresión Opto suave para musicalidad seguida de VCA para controlar picos.\n\n2. Grupos de Voces o Guitarras: Unifica la dinámica de capas complejas agregando un acabado profesional.\n\n3. Modelado Tonal de Salida: Cambia entre transformadores para modificar el brillo y la respuesta en graves.",
+      "qualities": "1. Procesamiento Híbrido Opto + VCA: Control dinámico en dos etapas secuenciales ultra-precisas.\n\n2. Transformadores de Salida Conmutables: Selecciona entre tres firmas de color analógico distintivas.\n\n3. Visualización y Vóltmetro Vintage: Recreación estética exacta de la unidad de hardware original."
+    },
+    {
+      "row": 74,
+      "developer": "Acustica audio",
+      "plugin": "Diamond Color EQ 3",
+      "type": "Ecualizador / Saturation",
+      "subgroup": "Vintage",
+      "description": "Diseñado junto al ingeniero de mastering Luca Pretolesi (Studio DMI). Combina ecualización de color, algoritmos de saturación armónica y filtros especiales orientados a la producción de música electrónica, Pop y géneros urbanos modernos.",
+      "idealFor": "1. Mastering de EDM y Reggaeton: Añade brillo hi-fi en agudos y pegada limpia en graves con curvas optimizadas.\n\n2. Sintetizadores Lead: Aplica saturación armónica para que el sintetizador corte a través de la mezcla.\n\n3. Ajustes Tónales Rápidos: Utiliza sus frecuencias predefinidas estratégicamente para abrir el sonido.",
+      "qualities": "1. Curvas de EQ Diseñadas por Pretolesi: Frecuencias y anchos de banda calibrados para música moderna.\n\n2. Sección de Saturación Dual: Añade armónicos pares e impares para aumentar la sonoridad percibida.\n\n3. Procesamiento Mid/Side Integrado: Permite ecualizar el centro de la mezcla de forma independiente a los lados."
+    },
+    {
+      "row": 75,
+      "developer": "Acustica audio",
+      "plugin": "Jam",
+      "type": "Saturador",
+      "subgroup": "Emulación",
+      "description": "Suite dedicada exclusivamente a la saturación armónica y distorsión analógica. Reúne decenas de preamplificadores, máquinas de cinta, pedales de efectos y circuitos de válvulas o transistores muestreados con la tecnología de procesamiento no lineal de Acustica.",
+      "idealFor": "1. Calidez Analógica General: Aplica saturación de cinta en el bus master para un acabado suave.\n\n2. Diseño Sonoro Creativo: Destruye o distorsiona baterías, bajos y voces con pedales vintage o tubos al límite.\n\n3. Enriquecimiento de Armónicos: Añade presencia a elementos digitales que suenan demasiado estériles.",
+      "qualities": "1. Vasta Biblioteca de Preamplificadores: Incluye emulaciones de hardware de tubos, estado sólido y cinta.\n\n2. Controles de Mezcla Parcial y Tono: Ajusta la proporción de señal procesada y la respuesta en frecuencia.\n\n3. Algoritmo de Saturación de Alta Resolución: Evita el aliasing digital manteniendo la riqueza armónica."
+    },
+    {
+      "row": 76,
+      "developer": "Acustica audio",
+      "plugin": "Erin",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Inspirado en los procesadores a tubos de masterización de gama alta (Manley Labs). Ofrece ecualizadores de precisión, un compresor/limitador de tubos ultra-suave y un preamplificador transparente que otorgan volumen y elegancia a cualquier producción.",
+      "idealFor": "1. Mastering Acústico y Pop: Proporciona un realce de agudos ultra-sedoso y un control dinámico imperceptible.\n\n2. Bus de Voces o Teclados: Aporta textura de tubos sin alterar el balance tonal original del instrumento.\n\n3. Acabado Pulido: Ideal para proyectos que requieren un sonido caro, expansivo y sin asperezas digitales.",
+      "qualities": "1. Válvulas de Grado de Mastering: Muestreo de equipos con componentes seleccionados por su baja distorsión.\n\n2. Sección de EQ de Alta Frecuencia: Curvas de realce suave que aportan aire sin resultar estridentes.\n\n3. Procesamiento Estéreo y Mid/Side: Flexibilidad completa para el tratamiento de mezclas finales."
+    },
+    {
+      "row": 77,
+      "developer": "Acustica audio",
+      "plugin": "Coffee",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Suite que recrea el sonido de procesadores a tubos americanos vintage y unidades modernas inspiradas en diseños clásicos. Combina preamplificadores de válvulas con varios tipos de EQ y un compresor de estilo vari-mu y diodo.",
+      "idealFor": "1. Voces de Rock y Soul: Aporta calidez de tubos gruesa con un carácter de medios presente y orgánico.\n\n2. Bajos y Guitarras Acústicas: Redondea las asperezas de la señal directa otorgando cuerpo y resonancia.\n\n3. Buses de Mezcla: Otorga color vintage y compresión blanda para cohesionar mezclas con estética retro.",
+      "qualities": "1. Múltiples Modos de EQ y Saturación: Intercambia circuitos de tubos vintage y estado sólido.\n\n2. Compresor Estilo Vari-Mu: Compresión basada en válvulas con respuesta musical a la dinámica.\n\n3. Controles de Color Tonal: Ajusta la saturación de los transformadores de entrada y salida."
+    },
+    {
+      "row": 78,
+      "developer": "Acustica audio",
+      "plugin": "Amber 3",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Recreación del prestigioso ecualizador paramétrico Clase-A de estado sólido (Avalon Design AD2055). Reconocido por su sonido transparente, ultra-limpio, estéreo amplio y capacidad para retocar frecuencias con absoluta pureza.",
+      "idealFor": "1. Mastering Transparente: Realza o atenúa frecuencias sin alterar la fase ni añadir distorsión no deseada.\n\n2. Voces e Instrumentos Acústicos: Inyecta brillo sutil en los agudos y cuerpo en las frecuencias graves.\n\n3. Corrección de Mezclas: Ajusta bandas específicas con gran precisión sin enturbiar el resto del espectro.",
+      "qualities": "1. Diseño de Estado Sólido Clase-A: Respuesta en frecuencia extremadamente lineal y transparente.\n\n2. Baja Distorsión Armónica: Preserva la claridad original del material de audio sin colorear en exceso.\n\n3. Mandos Paramétricos Completos: Control total sobre frecuencia, ganancia y factor de calidad (Q)."
+    },
+    {
+      "row": 79,
+      "developer": "Acustica audio",
+      "plugin": "Ivory 5",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Basado en el renombrado procesador de precisión de origen británico (Maselec). Es una suite diseñada específicamente para tareas de masterización donde se requiere un control dinámico y tonal quirúrgico sin pérdida de transparencia.",
+      "idealFor": "1. Mastering de Alta Precisión: Aplica ecualización y limitación en cadenas de masterización exigentes.\n\n2. Control de Sibilancia y Brillo: Utiliza sus filtros dinámicos para suavizar agudos excesivos en la mezcla.\n\n3. Ajuste de Balance Tonal Final: Esculpe la curva de respuesta global sin desviar la imagen estéreo.",
+      "qualities": "1. Arquitectura Cero-Coloración: Diseñado para modificar el audio manteniendo la pureza de la toma.\n\n2. Módulo Limitador y De-Esser: Herramientas integradas para el control de picos y frecuencias agudas.\n\n3. Pasos de Ganancia Calibrados: Controles escalonados ideales para recuperar ajustes exactos en mastering."
+    },
+    {
+      "row": 80,
+      "developer": "Acustica audio",
+      "plugin": "Cobalt 2",
+      "type": "Channel Strip",
+      "subgroup": "Valvulas",
+      "description": "Suite de procesamiento que emula equipos analógicos que combinan válvulas e inductores pasivos con control dinámico. Ofrece una ecualización dinámica única que reacciona a la intensidad de la señal procesada.",
+      "idealFor": "1. Control Espectral Dinámico: Atenúa frecuencias que solo resultan molestas en pasajes de volumen alto.\n\n2. Guitarras y Sintetizadores: Modula el timbre del instrumento dinámicamente según la ejecución musical.\n\n3. Mezclas de Batería: Mantiene bajo control los picos de frecuencias medias-agudas de los platos.",
+      "qualities": "1. Ecualización Dinámica a Válvulas: Curvas de EQ que cambian su nivel de realce o corte según la entrada.\n\n2. Preamplificadores de Tubo Suave: Aporta textura analógica sin saturar agresivamente.\n\n3. Interfaz Gráfica Moderna: Visualización clara del comportamiento dinámico de los filtros."
+    },
+    {
+      "row": 81,
+      "developer": "Acustica audio",
+      "plugin": "Magenta 5",
+      "type": "Channel Strip",
+      "subgroup": "Valvulas",
+      "description": "Recreación del icónico ecualizador pasivo de tubos de doble canal (Manley Massive Passive). Combina la curva de respuesta de ecualizadores pasivos con amplificación a tubos para esculpir el sonido de manera orgánica.",
+      "idealFor": "1. Mastering y Bus de Grupo: Aplica realces anchos en graves y agudos para dar apertura y peso a la mezcla.\n\n2. Voces e Instrumentos Solistas: Aporta presencia y dulzura sin generar asperezas digitales.\n\n3. Moldeado Tonal Profundo: Modifica drásticamente el carácter de un instrumento manteniendo la musicalidad.",
+      "qualities": "1. Filtros Pasivos Paralelos: Curvas de ecualización que interactúan entre sí de forma musical.\n\n2. Módulos Tube y FET: Permite seleccionar la etapa de amplificación analógica deseada.\n\n3. Modos de Masterización Dedicados: Incluye controles con pasos calibrados para mayor precisión."
+    },
+    {
+      "row": 82,
+      "developer": "Acustica audio",
+      "plugin": "Lava",
+      "type": "Emulacion",
+      "subgroup": "Microfono",
+      "description": "Procesador de modelado de micrófonos que permite transformar la respuesta de frecuencia y transitorios de un micrófono grabado en la de más de 100 micrófonos legendarios de condensador, cinta y dinámicos.",
+      "idealFor": "1. Re-micrófonado en Posproducción: Cambia la firma tonal de una toma vocal grabada con un micrófono económico.\n\n2. Guitarras Acústicas y Amplificadores: Prueba diferentes respuestas de micrófonos de cinta o condensador vintage.\n\n3. Consistencia en Grabaciones: Iguala el color tonal de tomas vocales realizadas con micrófonos distintos.",
+      "qualities": "1. Extensa Biblioteca de Micrófonos: Incluye emulaciones de modelos clásicos, modernos y raros.\n\n2. Corrección de Entrada/Salida: Selecciona el micrófono real utilizado y el modelo de destino deseado.\n\n3. Ajuste de Efecto Proximidad: Modifica la respuesta de graves según la distancia virtual al micrófono."
+    },
+    {
+      "row": 83,
+      "developer": "Acustica audio",
+      "plugin": "Aero",
+      "type": "Procesador de Guitarra",
+      "subgroup": "Pedales y Amplificadores",
+      "description": "Suite orientada al procesamiento de guitarras y bajos. Reúne pedales de efectos vintage, amplificadores de tubos y gabinetes muestreados con la tecnología de procesamiento no lineal en tiempo real de Acustica.",
+      "idealFor": "1. Grabación de Guitarras Eléctricas: Aplica emulaciones de pedales de overdrive y amplificadores en tomas directas.\n\n2. Procesamiento Creativo de Sintes: Pasa teclados o baterías a través de pedales de distorsión y amplificadores.\n\n3. Bajos Potentes: Combina la señal directa con la simulación de un gabinete de bajo a válvulas.",
+      "qualities": "1. Modelado No Lineal de Amplificadores: Recrea el comportamiento de las válvulas al ser exigidas al máximo.\n\n2. Cadenas de Pedales Configurables: Permite ordenar y combinar pedales de distorsión, modulación y tiempo.\n\n3. Respuesta de Impulso Dinámica: Captura la acústica y vibración de los altavoces de guitarra reales."
+    },
+    {
+      "row": 84,
+      "developer": "Acustica audio",
+      "plugin": "Space Control",
+      "type": "Imagen sonora",
+      "subgroup": "Procesador Stereo",
+      "description": "Desarrollado junto a Studio DMI, es un procesador de ancho estéreo y fase de última generación. Permite ensanchar la imagen estéreo de la mezcla o canales individuales sin introducir problemas de cancelación de fase en mono.",
+      "idealFor": "1. Ensanchamiento del Bus Master: Abre los laterales de la mezcla manteniendo el centro sólido y enfocado.\n\n2. Sintetizadores y FX Espaciales: Aumenta la dimensión de pads y guitarras sin perder presencia mono.\n\n3. Gestión de Fases en Graves: Mantiene las frecuencias subgraves estrictamente en mono para evitar cancelaciones.",
+      "qualities": "1. Algoritmo de Corrección de Fase: Garantiza la compatibilidad mono al ensanchar el espectro estéreo.\n\n2. Filtro Crossover Integrado: Controla el ancho estéreo de manera independiente por bandas de frecuencia.\n\n3. Medidores de Correlación Visual: Muestra la relación de fase y panorama en tiempo real."
+    },
+    {
+      "row": 85,
+      "developer": "Acustica audio",
+      "plugin": "Titanium 3",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Basado en el célebre compresor multibanda analógico a tubos (Tube-Tech MMC 2105). Permite dividir la señal en tres bandas independientes para procesar la dinámica de forma quirúrgica con la calidez de los circuitos de válvulas.",
+      "idealFor": "1. Mastering y Control de Mezclas: Controla el subgrave, los medios y el aire de agudos de forma independiente.\n\n2. Buses de Batería Complejos: Equilibra el golpe del bombo sin aplastar los platillos de la batería.\n\n3. Voces con Dinámica Inestable: Estabiliza el tono y volumen de la voz a lo largo de frecuencias variables.",
+      "qualities": "1. Procesamiento de 3 Bandas a Válvulas: Filtros crossover limpios combinados con compresión a tubos.\n\n2. Preamplificación Independiente: Permite saturar bandas de frecuencia específicas.\n\n3. Controles de Ataque y Liberación: Ajustes dinámicos adaptados para cada rango espectral."
+    },
+    {
+      "row": 86,
+      "developer": "Acustica audio",
+      "plugin": "Coral 2",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Procesador de masterización híbrido que combina ecualización pasiva, compresión transparente y un elíptico de fase. Diseñado para ofrecer la máxima transparencia posible con un suave toque de calidez analógica.",
+      "idealFor": "1. Mastering de Música Clásica o Jazz: Preserva la dinámica natural y la pureza tonal de la grabación.\n\n2. Control de Ancho Estéreo en Graves: Utiliza el filtro elíptico para centrar las bajas frecuencias en mono.\n\n3. Realces Tónales Limpios: Aumenta el aire o el cuerpo de una mezcla sin alterar el balance de los instrumentos.",
+      "qualities": "1. Arquitectura Transparente de Alta Gama: Diseñado para minimizar la distorsión armónica no deseada.\n\n2. Compresor de Respuesta Suave: Curvas de codo suave (soft-knee) ideales para compresión invisible.\n\n3. Filtro Elíptico Integrado: Elimina desfases y desequilibrios estéreo en las frecuencias graves."
+    },
+    {
+      "row": 87,
+      "developer": "Acustica audio",
+      "plugin": "Emerald 2",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Recreación del ultra-raro ecualizador alemán de los años 60/70 (Klein & Hummel UE-1000). Famoso por sus filtros de corte de pendiente empinada y sus curvas de ecualización pasiva a transistores de germanio.",
+      "idealFor": "1. Limpieza de Extremos de Banda: Filtra subgraves e agudos extremos con pendientes quirúrgicas únicas.\n\n2. Guitarras y Teclados Vintage: Otorga un carácter medio-grave espeso característico del germanio.\n\n3. Diseño Sonoro Tonal: Esculpe curvas de frecuencia poco habituales en ecualizadores modernos.",
+      "qualities": "1. Emulación de Transistores de Germanio: Textura analógica vintage distintiva y saturación suave.\n\n2. Filtros de Pendiente Variable: Permite cortes de frecuencia extremadamente limpios y musicales.\n\n3. Modelado de Circuitos Raros: Muestreo de hardware histórico difícil de encontrar en estado físico."
+    },
+    {
+      "row": 88,
+      "developer": "Acustica audio",
+      "plugin": "Eminence",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Suite especial que combina un preamplificador británico vintage de los años 60, una sección de ecualización pasiva de tubos y un compresor/limitador clásico modificados para producciones modernas.",
+      "idealFor": "1. Voces e Instrumentos Solistas: Inyecta un tono de época rico en armónicos con compresión suave.\n\n2. Guitarras Acústicas: Resalta la madera y la resonancia natural del instrumento.\n\n3. Buses de Grupo: Unifica secciones de instrumentos con una pátina analógica vintage.",
+      "qualities": "1. Combinación de Hardware Híbrido: Integra circuitos de válvulas y transistores vintage seleccionados.\n\n2. Compresor Estilo Vintage: Respuesta dinámica musical que suaviza los picos de forma orgánica.\n\n3. Sección de Preamplificación Cálida: Añade densidad armónica al aumentar la ganancia de entrada."
+    },
+    {
+      "row": 89,
+      "developer": "Acustica audio",
+      "plugin": "Cerise",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Channel strip gratuito/clásico que emula un afamado procesador de canal británico de estado sólido con transformadores de entrada y salida, ecualizador de cuatro bandas y compresor óptico/VCA.",
+      "idealFor": "1. Procesamiento General de Canales: Aplica ecualización y compresión rápida en cualquier pista de la mezcla.\n\n2. Voces Pop: Realza las altas frecuencias y controla la dinámica para situar la voz al frente.\n\n3. Guitarras Eléctricas y Bajos: Agrega la densidad y color característico de los transformadores analógicos.",
+      "qualities": "1. Emulación de Transformadores de Salida: Aporta calidez y grosor al aumentar el nivel de entrada.\n\n2. Compresor Versátil: Intercambia modos de respuesta rápida o suave según el instrumento.\n\n3. Totalmente Gratuito / Promocional: Calidad de procesamiento comercial en un paquete accesible."
+    },
+    {
+      "row": 90,
+      "developer": "Acustica audio",
+      "plugin": "Eminence",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Channel strip vintage de formato compacto que combina un ecualizador musical de tres bandas, una sección de compresión óptica suave y un preamplificador a tubos cargado de armónicos para imprimir carácter analógico inmediato.",
+      "idealFor": "1. Voces Principales: Utilizar el preamplificador y ecualizador para aportar cuerpo en los medios-graves y suavizar los agudos chillones.\n\n2. Buses de Batería o Guitarras: Aportar cohesión y glue analógico mediante el compresor óptico y el color a tubos.\n\n3. Mezclas Secas: Inyectar calidez y profundidad de cinta/válvula en elementos digitales que carecen de peso analógico.",
+      "qualities": "1. Diseño Vintage Unificado: Consolida compresión óptica, EQ y preamplificación de época en una única interfaz.\n\n2. Saturación Armónica de Válvula: Genera armónicos de orden par que engordan el tono sin distorsionar de forma agresiva.\n\n3. Procesamiento de Bajo Impacto: Ideal para añadir vibra clásica a cualquier fuente sin alterar drásticamente la dinámica natural."
+    },
+    {
+      "row": 91,
+      "developer": "Acustica audio",
+      "plugin": "Arctic",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Procesador dinámico \"todo en uno\" de última generación basado en la tecnología Hyper. Combina compresión, limitación y saturación armónica en una sola pantalla con un flujo de trabajo optimizado para mezcla moderna y mastering.",
+      "idealFor": "1. Bus Principal / Mastering: Utilízalo para aumentar el volumen percibido (loudness) manteniendo la pegada transitoria y la claridad.\n\n2. Buses de Baterías y Bajo: Ajusta la saturación y la compresión en paralelo para engordar los graves y controlar el rango dinámico.\n\n3. Sintetizadores e Instrumentos Digitales: Activa el motor de saturación para darles textura orgánica y mayor presencia en mezclas cargadas.",
+      "qualities": "1. Motor Hyper de Ultra Baja Latencia: Ofrece una respuesta de procesamiento extremadamente rápida y eficiente en consumo de CPU.\n\n2. Control Dinámico Completo: Fusiona las tres etapas fundamentales de la dinámica (compresión, limitación y saturación) en un control unificado.\n\n3. Sonido Transparente pero Contundente: Mantiene la respuesta de frecuencia limpia al tiempo que maximiza el impacto sonoro."
+    },
+    {
+      "row": 92,
+      "developer": "Acustica audio",
+      "plugin": "TAN 2",
+      "type": "Compresor",
+      "subgroup": "VCA",
+      "description": "Evolución del clásico compresor VCA de Acustica, famoso por su flexibilidad en el control de transitorios. Incorpora el innovador control Shaper para pre-moldear el ataque antes de ingresar al circuito de reducción de ganancia.",
+      "idealFor": "1. Caja y Bombo (Snare/Kick): Ajusta el mando Shaper para dejar pasar el impacto inicial antes de que actúe la compresión VCA.\n\n2. Bus de Mezcla Principal: Aplica relaciones de compresión bajas (1.5:1 o 2:1) para lograr el codiciado efecto \"glue\" sin ahogar la mezcla.\n\n3. Guitarras Acústicas y Percusión: Estabiliza las fluctuaciones de volumen conservando la naturalidad de la pulsación.",
+      "qualities": "1. Control Shaper Exclusivo: Permite modificar la curva del ataque inicial de los transitorios para un control de punch inigualable.\n\n2. Respuesta VCA Precisa: Proporciona un control dinámico firme, rápido y transparente ideal para cualquier estilo musical.\n\n3. Preamplificador Integrado: Incluye la etapa de ganancia analógica muestreada para añadir el color característico del hardware."
+    },
+    {
+      "row": 93,
+      "developer": "Acustica audio",
+      "plugin": "Fire The Gold",
+      "type": "Saturador / Preamp",
+      "subgroup": "Estado solido",
+      "description": "Módulo monomando (one-knob) impulsado por el motor de saturación Hyper. Captura el tono denso, cremoso y rico en armónicos de los transformadores y etapas de entrada de las consolas británicas Clase-A más cotizadas de la historia.",
+      "idealFor": "1. Pistas Individuales Secas: Aplica una perilla liviana en bajos, guitarras y sintetizadores para darles presencia y grosor inmediato.\n\n2. Buses de Grupo: Proporciona saturación de transformador sutil para unificar pistas que fueron grabadas en entornos digitales.\n\n3. Modo Ultra (Diseño Agresivo): Activa el botón Ultra en tomas de batería o voces de rock para romper el circuito y lograr una distorsión analógica orgánica.",
+      "qualities": "1. Tecnología Hyper Saturation: Captura la distorsión no lineal con un nivel impecable de detalle armónico sin saturar la CPU.\n\n2. Modo Ultra Avanzado: Simula con máxima precisión el comportamiento del hardware analógico cuando supera el punto de ruptura (breakpoint).\n\n3. Interfaz Ultra Inmediata: Flujo de trabajo simplificado de un solo mando (Magic Knob) para resultados rápidos e intuitivos."
+    },
+    {
+      "row": 94,
+      "developer": "Acustica audio",
+      "plugin": "Ceil / Big Ceil",
+      "type": "Channel Strip",
+      "subgroup": "Mastering / Mezcla",
+      "description": "Channel strip derivado de la afamada suite Lime. Emula los icónicos módulos de consola de sonido británico transparente y detallado, incorporando sección de ecualización, compresor de knee variable y preamp analógico.",
+      "idealFor": "1. Voces e Instrumentos Acústicos: Aprovecha la ecualización quirúrgica pero musical para resaltar el aire y la presencia vocal.\n\n2. Buses de Batería: Utiliza el compresor en modo rápido para aplanar picos indeseados mientras mantienes el tono británico prístino.\n\n3. Mastering o Mezcla General: Emplea los filtros de corte y la preamplificación para aportar nitidez y claridad en el espectro completo.",
+      "qualities": "1. EQ de Ultra Alta Calidad: Ofrece bandas extremadamente musicales con un control de Q variable de gran precisión acústica.\n\n2. Compresor Versátil con Knee Variable: Adapta la respuesta dinámica desde suavidad óptico-similar hasta control agresivo tipo VCA.\n\n3. Copia Fiel del Tono ISA: Modela la claridad de agudos y la definición de graves de los transformadores diseñados por Rupert Neve."
+    },
+    {
+      "row": 95,
+      "developer": "Acustica audio",
+      "plugin": "Cerise",
+      "type": "Channel Strip",
+      "subgroup": "Vintage",
+      "description": "Procesador dinámico galardonado diseñado para impartir el carácter moderno, limpio y con pegada del hardware de estudio británico contemporáneo. Ideal para compresión de bus de mezcla y control de transitorios.",
+      "idealFor": "1. Bus de Mezcla (Mix Bus): Aplica entre 1 y 3 dB de reducción de ganancia para pegar la mezcla con transparencia y pegada analógica.\n\n2. Baterías y Percusión: Utiliza los tiempos de ataque y liberación lentos para realzar la pegada de la caja y el bombo.\n\n3. Buses de Teclados y Sintetizadores: Domestica picos dinámicos amplios manteniendo el sonido abierto y expansivo.",
+      "qualities": "1. Carácter Británico Moderno: Entrega un tono cálido y denso sin perder la velocidad ni el detalle en las frecuencias agudas.\n\n2. Etapa de Limiting Integrada: Permite controlar picos extremos de ganancia antes de salir a la etapa digital.\n\n3. Controles Muestreados con Gran Fidelidad: Preserva la curvatura dinámica y la respuesta de frecuencia idéntica a la unidad física."
+    },
+    {
+      "row": 96,
+      "developer": "Acustica audio",
+      "plugin": "Ochre 5",
+      "type": "EQ",
+      "subgroup": "Parametrico",
+      "description": "Ecualizador paramétrico de tres bandas que destaca por su respuesta sumamente transparente, musical y limpia. Emula un legendario ecualizador de estado sólido caracterizado por no alterar de forma drástica la fase del audio.",
+      "idealFor": "1. Esculpido de Instrumentos Solistas: Realza o atenúa frecuencias clave en guitarras, pianos o cuerdas sin introducir asperezas.\n\n2. Buses de Voces: Aplica un ligero realce en los agudos para añadir brillo y presencia sin distorsionar las sibilantes.\n\n3. Mezclas Complejas: Utilízalo para limpiar frecuencias resonantes molestas en los medios-graves gracias a sus filtros ajustables.",
+      "qualities": "1. Respuesta Transparente y Lineal: Minimiza la distorsión de fase permitiendo curvas de ecualización pronunciadas pero naturales.\n\n2. Tres Bandas Paramétricas Completas: Ofrece control independiente de frecuencia, ganancia y ancho de banda (Q) por canal.\n\n3. Etapa de Preamp Limpia: Aporta la sutil coloración del circuito analógico original sin degradar la señal original."
+    },
+    {
+      "row": 97,
+      "developer": "Acustica audio",
+      "plugin": "RED EQ",
+      "type": "EQ",
+      "subgroup": "Parametrico",
+      "description": "Ecualizador de tres bandas fácil de usar diseñado para capturar la calidez y el color característico del hardware óptico británico. Destaca por impartir un tono retro cremoso a cualquier fuente de audio.",
+      "idealFor": "1. Guitarras Eléctricas y Acústicas: Añade cuerpo en las frecuencias medias y suaviza el ataque agresivo de las plectros.\n\n2. Voces Vintage: Realza los medios-agudos para dar una textura \"analógica de los 70\" con personalidad y presencia.\n\n3. Bajos Eléctricos: Refuerza los 100 Hz para otorgar peso sin enturbiar el rango subgrave.",
+      "qualities": "1. Carácter Tonal Único (Joemeek Color): Ofrece las curvas de ecualización distintivas de los circuitos ópticos británicos.\n\n2. Simplicidad de Controles: Diseñado para moldear el sonido rápidamente con pocos ajustes y gran musicalidad.\n\n3. Preamplificador Óptico Integrado: Añade una suave saturación armónica de fondo que redondea los picos de señal."
+    },
+    {
+      "row": 98,
+      "developer": "Acustica audio",
+      "plugin": "Sienna Free",
+      "type": "Emulacion",
+      "subgroup": "Sala",
+      "description": "Plugin de mezcla binaural que transforma la escucha en auriculares emulando la respuesta acústica de salas de control profesionales y monitores de estudio de gama alta mediante tecnología de convolución espacial.",
+      "idealFor": "1. Mezcla y Mastering en Auriculares: Utilízalo en el canal de monitoreo para tomar decisiones precisas de balance, ecualización y panorama.\n\n2. Verificación de Mezclas: Alterna entre diferentes modelos de monitores virtualizados para comprobar la traducibilidad de tu tema.\n\n3. Producción Itinerante: Mantén una referencia de escucha constante y profesional en cualquier lugar usando audífonos convencionales.",
+      "qualities": "1. Tecnología Volumetric Spatial Engine: Modela fielmente la acústica de salas físicas y altavoces reales en formato binaural.\n\n2. Perfiles de Corrección para Auriculares: Equaliza la respuesta de frecuencia de cientos de modelos de audífonos comerciales.\n\n3. Zero Latency Mode: Diseñado para utilizarse tanto en etapas de grabación como en etapas finales de mezcla."
+    },
+    {
+      "row": 99,
+      "developer": "Acustica audio",
+      "plugin": "TH2 (Thing 2)",
+      "type": "Sintetizador",
+      "subgroup": "Sustractivo",
+      "description": "Instrumento virtual híbrido que combina síntesis analógica con el potente motor de muestreo dinámico de Acustica Audio. Diseñado para recrear los sonidos de sintetizadores de culto de los años 80 con un grosor analógico incomparable.",
+      "idealFor": "1. Líneas de Bajo Analógico: Programa bajos ochenteros profundos y potentes que cortan limpiamente a través de la mezcla.\n\n2. Pads y Texturas Evolutivas: Crea capas atmosféricas ricas en armónicos gracias al procesamiento analógico integrado.\n\n3. Synthwave y Synthpop: Utilízalo como elemento central para producciones electrónicas de inspiración retro o cinematográfica.",
+      "qualities": "1. Motor MUST Technology: Emplea tecnología de convolución para capturar la respuesta real de circuitos analógicos de sintetizador.\n\n2. Parámetros Timbrales Ricos: Incluye filtros, envolventes y osciladores muestreados directamente de equipos vintage.\n\n3. Sonido \"Out-of-the-Box\" Listo para Mezclar: Entrega un tono denso y pulido que no requiere ecualización previa excesiva."
+    },
+    {
+      "row": 100,
+      "developer": "Acustica audio",
+      "plugin": "Pureteq Free",
+      "type": "EQ",
+      "subgroup": "Pultec",
+      "description": "Recreación ligera y de alto rendimiento del ecualizador pasivo a tubos más afamado de la historia. Permite realizar el famoso \"truco Pultec\" de realzar y cortar la misma frecuencia simultáneamente para esculpir graves masivos y agudos sedosos.",
+      "idealFor": "1. Bombo y Bajo: Aplica el truco de Boost/Atten en 30 Hz o 60 Hz para obtener un grave profundo sin saturar la mezcla.\n\n2. Voces e Instrumentos: Realza los 10 kHz o 12 kHz para inyectar \"aire\" analógico y claridad prístina sin aspereza.\n\n3. Master Bus: Utiliza curvas suaves en graves y agudos para dar el toque final de pulido profesional al tema completo.",
+      "qualities": "1. Fidelidad al Algoritmo Pultec: Reproduce fielmente las curvas interactivas de ecualización pasiva del hardware clásico.\n\n2. Bajo Consumo de Recursos: Desarrollado bajo la línea SoundDrops para ejecutar múltiples instancias en sesiones pesadas.\n\n3. Banda Adicional de High-Shelf: Añade flexibilidad moderna incorporando una curva de realce en agudos superior a la del hardware original."
+    },
+    {
+      "row": 101,
+      "developer": "Acustica audio",
+      "plugin": "Jet Free",
+      "type": "EQ",
+      "subgroup": "Dinamico",
+      "description": "Herramienta de ecualización dinámica versátil que combina el rendimiento analógico muestreado de Acustica con el control en tiempo real. Permite atenuar o realzar frecuencias en función del nivel de entrada de la señal.",
+      "idealFor": "1. Control de Sibilantes Vocales: Configura una banda dinámica en los agudos para atenuar 'S' molestas solo cuando excedan un umbral.\n\n2. Limpieza de Resonancias de Batería: Suprime acumulaciones molestas en la caja o toms sin alterar el timbre natural cuando no hay picos.\n\n3. Mezcla de Bajo y Bombo (Sidechain): Atenúa las frecuencias graves del bajo únicamente cuando el bombo golpea para dar espacio.",
+      "qualities": "1. Ecualización Dinámica Transparente: Mantiene el tono natural de la fuente adaptándose constantemente a la dinámica de la señal.\n\n2. Arquitectura Modular Cargable: Permite expandir sus posibilidades mediante algoritmos de ecualización descargables en Aquarius.\n\n3. Procesamiento de Precisión: Ofrece quirúrgica detección de picos con respuesta ultra rápida y baja alteración de fase."
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Módulo interactivo de PLUGIN MATCH." />
+  <title>Módulo · PLUGIN MATCH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Roboto+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="module.css" />
+</head>
+<body data-page="module">
+  <header class="site-header compact-header">
+    <a class="brand-pill is-active" href="index.html">PLUGINS/VST</a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="plugins.html">CATÁLOGO</a>
+      <a href="index.html#monthly">DESTACADOS</a>
+      <a href="index.html#categories">FAMILIAS</a>
+      <a href="index.html#categories">PM-GAME</a>
+    </nav>
+    <label class="search-shell header-search" aria-label="Búsqueda personalizada">
+      <span class="search-icon" aria-hidden="true"></span>
+      <input data-catalog-search type="search" placeholder="BUSCAR PLUGINS" autocomplete="off" />
+    </label>
+    <button class="avatar-button" type="button" aria-label="Cuenta" data-account-placeholder><span class="avatar-head"></span><span class="avatar-body"></span></button>
+    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNavPanel"><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-nav-panel" id="mobileNavPanel" hidden>
+    <button class="mobile-nav-backdrop" type="button" data-mobile-nav-dismiss aria-label="Cerrar menú"></button>
+    <div class="mobile-nav-sheet">
+      <div class="mobile-nav-top">
+        <strong>PLUGIN MATCH</strong>
+        <button id="mobileNavClose" class="mobile-nav-close" type="button" aria-label="Cerrar menú">×</button>
+      </div>
+      <nav aria-label="Navegación móvil">
+        <a href="plugins.html">CATÁLOGO <span>→</span></a>
+        <a href="index.html#monthly">DESTACADOS <span>→</span></a>
+        <a href="index.html#categories">FAMILIAS <span>→</span></a>
+        <a href="index.html#categories">PM-GAME <span>→</span></a>
+      </nav>
+      <a class="mobile-studio-link" href="studio.html">DEV STUDIO</a>
+    </div>
+  </div>
+
+  <main id="moduleRoot" class="generated-module" hidden>
+    <section class="generated-hero">
+      <div class="module-breadcrumb"><a href="plugins.html">← VOLVER AL CATÁLOGO</a></div>
+      <div class="plugin-detail-heading generated-heading">
+        <h1 id="moduleTitle"></h1>
+        <a class="download-button" id="moduleDownload" href="#" target="_blank" rel="noopener">DESCARGAR</a>
+        <p id="moduleMeta"></p>
+      </div>
+
+      <div class="generated-stage" id="generatedStage">
+        <img id="generatedImage" class="generated-image" alt="Interfaz del plugin" />
+        <span class="module-image-pending" id="moduleImagePending" hidden>IMAGEN PENDIENTE · COMPLETAR EN STUDIO</span>
+        <svg id="generatedLines" class="generated-lines" aria-hidden="true"></svg>
+        <div id="generatedControls" class="generated-controls"></div>
+      </div>
+      <p class="diagram-hint">Haz clic en un punto o etiqueta para ver su explicación.</p>
+      <div class="mobile-control-strip" id="mobileControlStrip" aria-label="Controles del plugin"></div>
+
+      <div class="generated-control-reader" id="controlReader">
+        <span>CONTROL</span>
+        <h2 id="controlReaderTitle">Selecciona un control</h2>
+        <p id="controlReaderBody">Las explicaciones creadas en Studio aparecerán aquí.</p>
+      </div>
+    </section>
+
+    <section class="detail-grid section-shell generated-detail-grid">
+      <div class="description-column">
+        <h2>DESCRIPCIÓN</h2>
+        <div class="info-card description-card" id="moduleDescription"></div>
+        <h2 class="rating-title">VALORACIÓN</h2>
+        <div class="rating-badge" id="moduleRating"></div>
+      </div>
+      <div class="use-column">
+        <h2>PLUGIN IDEAL PARA:</h2>
+        <div class="stacked-cards" id="idealForCards"></div>
+      </div>
+      <div class="quality-column">
+        <h2>CUALIDADES</h2>
+        <div class="stacked-cards" id="qualityCards"></div>
+      </div>
+    </section>
+  </main>
+
+  <section class="module-error" id="moduleError" hidden>
+    <h1>Módulo no encontrado</h1>
+    <p>Abre Studio, guarda el módulo y vuelve a previsualizarlo.</p>
+    <a href="studio.html">ABRIR STUDIO</a>
+  </section>
+
+  <a class="dev-studio-launch" href="studio.html">DEV STUDIO</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="module-defaults.js"></script>
+  <script src="catalogo-inicial.js"></script>
+  <script src="excel-importer.js"></script>
+  <script src="studio-storage.js"></script>
+  <script src="public-catalog.js"></script>
+  <script src="ui.js"></script>
+  <script src="module-renderer.js"></script>
+</body>
+</html>
